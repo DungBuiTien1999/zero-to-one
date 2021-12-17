@@ -1,0 +1,21 @@
+
+@import "../../style.module.scss";
+
+.iconplay{
+  background: -webkit-linear-gradient(253.58deg, #FFC000 1.55%, #FF8A00 95.8%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.styleModal{
+  //position: fixed !important;
+  width: 60%;
+  //height: 750px;
+  //height: 100%;
+}
+
+.progress{
+  width: 200px !important;
+  top: 22px !important;
+  height: 10px !important;
+}

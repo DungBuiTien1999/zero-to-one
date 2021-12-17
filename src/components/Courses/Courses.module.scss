@@ -1,0 +1,18 @@
+@import '../../styles/config';
+
+.title {
+    font-size: 30px;
+    color: $primaryColor;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.listCourse {
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.swiperSlide:hover{
+    cursor: pointer !important;
+}
