@@ -81,7 +81,16 @@ $linkColor: #FFC000;
 }
 
 .swiper-button-next, .swiper-button-prev {
-  color: #FF8A00 !important;
+  color: black !important;
+  width: 52.9142px;
+  height: 52.9142px;
+  background-color: #FF8A00;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 // .swiper-button-next {

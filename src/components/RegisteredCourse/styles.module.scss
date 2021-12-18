@@ -1,0 +1,48 @@
+@import '../../styles/config';
+
+.title {
+    font-size: 35px;
+    color: $primaryColor;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.courseList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.courseCard {
+    width: 549.76px;
+    height: 125px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    background: #F6F6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    img {
+        width: 125px;
+        height: 125px;
+        border-radius: 5px;
+    }
+    .content {
+        .name {
+            color: #FF9F00;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .lettor {
+            color: gray;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+}

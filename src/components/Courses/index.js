@@ -28,11 +28,18 @@ const Courses = ({ title, courses }) => {
 
   return (
     <Fragment>
-      <h3 className={classes.title}>{title}</h3>
+      
+      <div className={classes.rowTitle}>
+        <h3 className={classes.title}>{title}</h3>
+        <div className={classes.btnSeeAll}>
+          See all
+          <i class="material-icons">arrow_forward</i>
+        </div>
+      </div>
       <section className={classes.listCourse}>
       <Swiper
             slidesPerView={4}
-            spaceBetween={30}
+            spaceBetween={25}
             slidesPerGroup={2}
             loop={true}
             loopFillGroupWithBlank={true}
@@ -40,7 +47,7 @@ const Courses = ({ title, courses }) => {
               clickable: true,
             }}
             navigation={true}
-            className="mySwiper"
+            className={classes.mySwiper}
           >
             {courses.map((course) => (
               <SwiperSlide

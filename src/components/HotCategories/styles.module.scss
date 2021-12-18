@@ -1,9 +1,9 @@
 @import '../../styles/config';
 
 .title {
-    font-size: 30px;
+    font-size: 35px;
     color: $primaryColor;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: 50px;
     margin-bottom: 30px;
 }
@@ -14,9 +14,12 @@
 
 .categoriCard {
     background: $primaryBg;
-    width: 250px;
-    min-width: 100px;
+    width: 232px;
+    height: 51px;
     margin-left: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .categoriCard:hover{
@@ -28,7 +31,7 @@
 }
 
 .content {
-    color: #fff;
+    color: #000;
     font-size: 1.2em;
     font-weight: bold;
 }

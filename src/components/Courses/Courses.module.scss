@@ -1,11 +1,36 @@
 @import '../../styles/config';
 
+.rowTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .title {
-    font-size: 30px;
     color: $primaryColor;
-    font-weight: bold;
     margin-top: 50px;
     margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 158.34%;
+}
+
+.btnSeeAll {
+    width: 120px;
+    height: 36px;
+    left: 1086px;
+    top: 1295.31px;
+
+    background: #FFFFFF;
+    border: 2.5px solid #FF9A62;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    color: #FF9A62;
 }
 
 .listCourse {
@@ -15,4 +40,8 @@
 
 .swiperSlide:hover{
     cursor: pointer !important;
+}
+
+.mySwiper{
+    height: 380px;
 }
