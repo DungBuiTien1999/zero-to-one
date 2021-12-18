@@ -36,10 +36,10 @@ function* fectchRegisterCourse(action) {
     }
   } catch (err) {
     console.log(err);
-    Swal.fire({
-      icon: 'error',
-      title: 'Something went wrong',
-    })
+    // Swal.fire({
+    //   icon: 'error',
+    //   title: 'Something went wrong',
+    // })
   }
 }
 

@@ -150,10 +150,10 @@ export default function OverviewInfo(props) {
                 }
                 {
 
-                  registerCourse.course_id === props.id && registerCourse.isRegister
-                    ?
+                  // registerCourse.course_id === props.id && registerCourse.isRegister
+                  //   ?
                     <Link to={{
-                        pathname: "/learning",
+                        pathname: "/video-course",
                         state: {
                           course_id: props.id,
                         },
@@ -161,8 +161,8 @@ export default function OverviewInfo(props) {
                       className="waves-light btn">
                       Vào học
                     </Link>
-                    :
-                    <button className="waves-light btn" onClick={() => RegisterLearning(props.id)}>Đăng ký ngay</button>
+                    // :
+                    // <button className="waves-light btn" onClick={() => RegisterLearning(props.id)}>Đăng ký ngay</button>
                 }
               </div>
 

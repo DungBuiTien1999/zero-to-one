@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import classes from './style.module.scss';
 import * as actionType from '../../../../../redux/constants/actionTypes';
 import M from 'materialize-css/dist/js/materialize.min.js';
-import { DOMAIN_API } from "../../../../../redux/constants/common";
 import ReactPlayer from "react-player";
 import { timeFormart } from '../../../../../utils/helpers';
 
@@ -45,7 +44,7 @@ export default function Video(props) {
 
   let configReactPlayer = {
     className: 'react-player',
-    url: `${DOMAIN_API}/common/media/load_video/${props.video_source}`,
+    url: props.video_source,
     width: "100%",
     height: "100%",
     controls: true,

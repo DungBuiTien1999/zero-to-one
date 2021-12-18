@@ -34,10 +34,10 @@ function* fetchUpdateCourseComment(action) {
         break;
     }
   } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Something went wrong',
-    })
+    // Swal.fire({
+    //   icon: 'error',
+    //   title: 'Something went wrong',
+    // })
     console.log(error);
   }
 }

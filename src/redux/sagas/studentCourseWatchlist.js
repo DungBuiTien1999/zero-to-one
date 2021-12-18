@@ -28,10 +28,10 @@ function* fetchStudentCourseWatchlist() {
         break;
     }
   } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Some thing went wrong',
-    })
+    // Swal.fire({
+    //   icon: 'error',
+    //   title: 'Some thing went wrong',
+    // })
     console.error(error)
   }
 }

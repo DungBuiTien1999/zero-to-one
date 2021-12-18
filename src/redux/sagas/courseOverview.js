@@ -2,7 +2,7 @@ import { takeEvery, call, put, all } from 'redux-saga/effects';
 import axios from 'axios';
 import * as actionType from '../constants/actionTypes';
 import { DOMAIN_API } from '../constants/common';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import { courseOverview } from '../../api/course';
 
 function* fetchCourseOverview(action) {
@@ -62,10 +62,10 @@ function* fetchCourseComment(action) {
     }
   } catch (err) {
     console.log(err);
-    Swal.fire({
-      icon: 'error',
-      title: 'Something went wrong',
-    })
+    // Swal.fire({
+    //   icon: 'error',
+    //   title: 'Something went wrong',
+    // })
   }
 }
 

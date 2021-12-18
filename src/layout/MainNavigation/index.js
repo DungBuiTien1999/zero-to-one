@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import classes from './style.module.scss';
 import { Link } from 'react-router-dom';
 import StudentNavbar from './studentNavbar';
@@ -5,22 +6,25 @@ import LecturerNavbar from './lecturerNavbar';
 import AdminNavbar from './adminNavbar';
 import GuestNavbar from './guestNavbar';
 import SearchNavbar from './searchNavbar';
-import {useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import {ROLE_STUDENT, ROLE_LECTURER, ROLE_ADMIN} from '../../redux/constants/common'; 
-import * as actionType from '../../redux/constants/actionTypes';
 
 function MainNavigation() {
-  const header = useSelector(state => state.header.data);
-  const dispatch = useDispatch();
+  const [header, setHeader] = useState({
+    isAuth: false,
+    role: 0,
+    fullname: "",
+    img_source: ""
+  })
 
   useEffect(function(){
-    dispatch({
-      type: actionType.FETCH_HEADER
-    })
-  },[dispatch])
+    const isauth = localStorage.getItem("isAuth") === "true";
+    const role = localStorage.getItem("role");
+    const username = localStorage.getItem("username");
+    setHeader({ isAuth: isauth, role: role, fullname: username, img_source: ""});
+  },[])
 
-  //console.log(header);
+  // console.log(header);
 
   return (
     <nav className={classes.header}>
@@ -36,7 +40,7 @@ function MainNavigation() {
 
         {/* Đã/Chưa đăng nhập - Student + Guest */}
         {
-          !header.isAuth  || (header.isAuth && header.role === ROLE_STUDENT)
+          !header.isAuth  || (header.isAuth && +header.role === ROLE_STUDENT)
           ? <SearchNavbar/>
           : <div></div>
         }
@@ -45,7 +49,7 @@ function MainNavigation() {
         { !header.isAuth && <GuestNavbar /> }
 
         {/*Đã đăng nhập - Student */}
-        { header.isAuth && header.role === ROLE_STUDENT && <StudentNavbar {...header}/> }
+        { header.isAuth && +header.role === ROLE_STUDENT && <StudentNavbar {...header}/> }
 
         {/*Đã đăng nhập - Lecturer */}
         { header.isAuth && header.role === ROLE_LECTURER && <LecturerNavbar {...header}/> }

@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import classes from './styles.module.scss';
 
 const HotCategories = ({title, categories}) => {
-    console.log(categories);
     const history = useHistory();
     const getcourseByCategory = (category_id, category_name)=>{
         history.push({

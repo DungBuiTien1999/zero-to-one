@@ -54,10 +54,10 @@ function* addFavoriteCourse(course_id){
         break;
     }
   } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Something went wrong',
-    })
+    // Swal.fire({
+    //   icon: 'error',
+    //   title: 'Something went wrong',
+    // })
     console.log(error);
   }
 }
@@ -98,10 +98,10 @@ function* deleteFavoriteCourse(course_id){
         break;
     }
   } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Something went wrong',
-    })
+    // Swal.fire({
+    //   icon: 'error',
+    //   title: 'Something went wrong',
+    // })
     console.log(error);
   }
 }

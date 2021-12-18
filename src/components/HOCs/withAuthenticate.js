@@ -5,23 +5,20 @@ import { useHistory } from "react-router";
 //roleArr: the array contains roles
 const WithAuthenticate = (WrappedComponent, roleArr) => {
   const AuthenticatedRoute = (props) => {
-  const accessToken = localStorage.getItem('accessToken');
-  const payload = localStorage.getItem('decodePayload');
+  const username = localStorage.getItem('username');
+  const password = localStorage.getItem('password');
+  const role = localStorage.getItem('role');;
   const history = useHistory();
-  let role = null;
+  
   const [loading, setLoading] = useState(true);
 
-  if(payload){
-    role = JSON.parse(payload).role;
-  }
-
     useEffect(() => {
-      if (accessToken && roleArr.includes(role, 0)) {
+      if (username && password && roleArr.includes(role, 0)) {
         setLoading(false);
       } else {
         history.push('/login');
       }
-    }, [accessToken,history, role])
+    }, [username, password,history, role])
 
     return (
       loading ? <div>Loading...</div> : <WrappedComponent {...props} />

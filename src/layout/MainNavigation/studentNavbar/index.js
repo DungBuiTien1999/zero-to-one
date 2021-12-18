@@ -2,14 +2,12 @@ import classes from './style.module.scss';
 import { Link, useHistory } from "react-router-dom"
 import Avartar from '../../../components/Common/Avartar';
 import M from 'materialize-css/dist/js/materialize.min.js';
-import { useDispatch } from 'react-redux';
-import * as actionType from '../../../redux/constants/actionTypes'
 import { useEffect } from 'react';
 
 export default function StudentNavbar(props) {
  
   const history = useHistory();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   useEffect(function(){
     const elems = document.querySelectorAll('.dropdown-trigger');
@@ -17,12 +15,17 @@ export default function StudentNavbar(props) {
     const instances = M.Dropdown.init(elems, {});
   },[props])
 
-  const logout = ()=>{
-    dispatch({
-      type: actionType.FETCH_LOGOUT
-    })
+  useEffect(() => {
 
-    history.push('/');
+  })
+
+  const logout = ()=>{
+    localStorage.setItem("username", "");
+    localStorage.setItem("password", "");
+    localStorage.setItem("role", 0);
+    localStorage.setItem("isAuth", false);
+
+    history.push('/login');
   }
   return (
     <ul className="right hide-on-med-and-down">

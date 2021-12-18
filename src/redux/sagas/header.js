@@ -47,10 +47,6 @@ function* fetchCategory() {
         break;
     }
   } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Some thing went wrong',
-    })
     console.error(error)
   }
 }
