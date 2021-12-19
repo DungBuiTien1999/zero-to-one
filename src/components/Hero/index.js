@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './style.module.scss';
 
 const Hero = () => (
   // <div className={`row ${classes.hero}`}>

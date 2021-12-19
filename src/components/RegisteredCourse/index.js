@@ -17,29 +17,17 @@ const RegisteredCourse = ({courses, title}) => {
                             <div className={classes.content}>
                                 <h6 className={classes.name}>{course.title}</h6>
                                 <p className={classes.lettor}>{course.lecturer}</p>
-                                <Progress_bar progress={course.progress} height={20} />
+                                <ProgressBar progress={course.progress} height={20} />
                             </div>
                         </div>
                     </div>
                 ))}
             </section>
-            {/* <section className={classes.courseList}>
-                <div>
-                    <div className={classes.courseCard}>
-                        <img src='assets/images/course/course3.jpg' alt='Course' /> 
-                        <div className={classes.content}>
-                            <h6 className={classes.name}>100 Days Of Code - Web Development Bootcamp [2022] Super Sale</h6>
-                            <p className={classes.lettor}>Quang Hải</p>
-                            <Progress_bar progress='85'  height={20} />
-                        </div>
-                    </div>
-                </div>
-            </section> */}
         </Fragment>
     );
 }
 
-const Progress_bar = ({progress,height}) => {
+const ProgressBar = ({progress,height}) => {
      
     const Parentdiv = {
         height: height,

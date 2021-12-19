@@ -24,19 +24,15 @@ const Home = () => {
         <Hero />
         <main className={classes.main}>
           <div>
-            {/* <div className={classes.welcome}>
-              <p>Tất cả các khóa học đặc sắc nhất</p>
-              <p>được cập nhật hàng tuần, hàng tháng</p>
-            </div> */}
             <section>
               {/*Đã đăng nhập - Student */}
-              { header.isAuth && <RegisteredCourse courses={myCourses} title='Khóa học của tôi' /> }
+              { header.isAuth && (<RegisteredCourse courses={myCourses} title='Khóa học của tôi' ></RegisteredCourse>) }
             </section>
             <section>
-              <Courses courses={hotCourses} title='Các khóa học nổi bật' />
+              <Courses courses={hotCourses} title='Những khóa học nổi bật' />
             </section>
             <section>
-              <Courses courses={latestCourses} title='Các khóa học bán chạy' />
+              <Courses courses={latestCourses} title='Những khóa học bán chạy' />
             </section>
             <section>
               <Courses courses={mostViewCourses} title='Những khóa học mới' />
