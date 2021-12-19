@@ -205,6 +205,56 @@ export const hotCourses = [
     },
 ]
 
+export const myCourses = [
+    {
+        id: 1,
+        title: "Khóa học Javascript cho người mới bắt đầu",
+        lecturer: "Quang Hải",
+        rating: 4.5,
+        total_student: 10000,
+        price: 2000000,
+        img_source: "assets/images/course/course6.png",
+        isBestseller: true,
+        discount: 20,
+        progress: 15,
+    },
+    {
+        id: 2,
+        title: "iOS & Swift - The Complete iOS App Development Bootcamp",
+        lecturer: "Midu",
+        rating: 4.5,
+        total_student: 10000,
+        price: 2000000,
+        img_source: "assets/images/course/course7.jpg",
+        isBestseller: true,
+        discount: 20,
+        progress: 50,
+    },
+    {
+        id: 3,
+        title: "100 Days Of Code - Web Development Bootcamp [2022]",
+        lecturer: "lecturer demo",
+        rating: 4.5,
+        total_student: 10000,
+        price: 2000000,
+        img_source: "assets/images/course/course8.jpg",
+        isBestseller: true,
+        discount: 20,
+        progress: 85,
+    },
+    {
+        id: 4,
+        title: "Build Web Apps with React & Firebase",
+        lecturer: "Quang Hải",
+        rating: 4.5,
+        total_student: 10000,
+        price: 2000000,
+        img_source: "assets/images/course/course2.jpg",
+        isBestseller: true,
+        discount: 20,
+        progress: 100,
+    },
+]
 export const hotCategories = [
     {
         id: 1,

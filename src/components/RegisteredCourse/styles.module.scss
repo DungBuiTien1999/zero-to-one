@@ -32,8 +32,11 @@
         width: 125px;
         height: 125px;
         border-radius: 5px;
+        object-fit: cover;
     }
     .content {
+        margin: 10px;
+        width: 100%;
         .name {
             color: #FF9F00;
             font-size: 18px;
@@ -43,6 +46,7 @@
             color: gray;
             font-size: 15px;
             font-weight: bold;
+            margin: 5px;
         }
     }
 }
