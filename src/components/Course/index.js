@@ -3,11 +3,11 @@ import currency from 'currency.js';
 import StarRatings from 'react-star-ratings';
 import classes from './Course.module.scss';
 
-const Course = ({ title, lecturer, rating, total_student, price, img_source, isBestseller, discount}) => (
+const Course = ({ title, lecturer, rating, total_student, price, img_source, discount, category}) => (
     <article className={classes.card}>
       <img src={img_source} alt={`Course ${title}`} /> 
       {/* {isBestseller && <span className="new badge red" data-badge-caption="Bestseller"></span>} */}
-      <div className={classes.btnPosition}>Lập trình web</div>
+      <div className={classes.btnPosition}>{category?.name}</div>
       <div className={classes.content}>
         <p className={classes.title}>{title}</p>
         <p className={classes.lecturer}>{lecturer}</p>

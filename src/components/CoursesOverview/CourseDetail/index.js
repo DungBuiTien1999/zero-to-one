@@ -4,8 +4,6 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import Overview from './Overview/index';
 import Content from './Content/index';
 import Feedback from './Feedback/index';
-//import { useDispatch, useSelector} from 'react-redux';
-//import * as actionType from '../../../redux/constants/actionTypes';
 
 export default function CourseOverview(props) {
   useEffect(function () {
