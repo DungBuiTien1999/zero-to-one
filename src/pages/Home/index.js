@@ -29,16 +29,16 @@ const Home = () => {
               { header.isAuth && (<RegisteredCourse courses={myCourses} title='Khóa học của tôi' ></RegisteredCourse>) }
             </section>
             <section>
-              <Courses courses={hotCourses} title='Những khóa học nổi bật' />
+              <Courses courses={ hotCourses } title='Những khóa học nổi bật' />
             </section>
             <section>
-              <Courses courses={latestCourses} title='Những khóa học bán chạy' />
+              <Courses courses={ latestCourses } title='Những khóa học bán chạy' />
             </section>
             <section>
-              <Courses courses={mostViewCourses} title='Những khóa học mới' />
+              <Courses courses={ mostViewCourses } title='Những khóa học mới' />
             </section>
             <section>
-              <HotCategories categories={hotCategories} title='Danh mục nổi bật' />
+              <HotCategories categories={ hotCategories } title='Danh mục nổi bật' />
             </section>
             
           </div>
