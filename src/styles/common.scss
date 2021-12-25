@@ -82,10 +82,24 @@ $linkColor: #FFC000;
 
 .swiper-button-next, .swiper-button-prev {
   color: black !important;
-  width: 52.9142px;
-  height: 52.9142px;
-  background-color: #FF8A00;
+  width: 42.17px;
+  height: 42.17px;
+  background-color: #FCD500;
   border-radius: 50%;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: 0px;
+  right: auto;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: 0px;
+  left: auto;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: -15px;
+  left: 0;
+  width: 100%;
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {

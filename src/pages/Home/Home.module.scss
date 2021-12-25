@@ -2,21 +2,27 @@
 
 .container {
   display: table-footer-group;
-    .main {
-      padding: 50px;
-      width: 1272px;
-      align-self: center;
-      
 
-      .welcome {
-        color: $primaryColor;
-        font-size: 24px;
-        line-height: 15px;
+  .main {
+    padding: 50px;
+    width: 1272px;
+    align-self: center;  
+
+    .welcome {
+      color: $primaryColor;
+      font-size: 24px;
+      line-height: 15px;
         
-        p:first-child {
-          font-weight: bold;
-          font-size: 32px;
-        }
+      p:first-child {
+        font-weight: bold;
+        font-size: 32px;
       }
     }
   }
+
+  img {
+    width: 100% !important;
+    height: auto;
+    object-fit: contain;
+  }
+}
