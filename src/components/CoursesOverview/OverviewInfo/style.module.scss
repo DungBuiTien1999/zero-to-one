@@ -1,10 +1,16 @@
 @import '../../../styles/config';
 
+@mixin font{
+  font-family: 'Roboto';
+}
+
 .playerwrapper{
   background-color: #0D1C45 !important;
   margin: 0 !important;
   width: 100%;
   padding: 10px 0px !important;
+  display: flex;
+  justify-content: space-between;
 }
 
 .controlheader{
@@ -22,10 +28,17 @@
   font-weight: bold;
 }
 
-.namecourse{
-  color: #FCD302;
-  font-weight: 900;
-  font-size: 40px;
+.course{
+  &__name{
+    color: #FCD302;
+    font-weight: 900;
+    font-size: 40px;
+    @include font();
+  }
+  &__short-description{
+    font-size: 20px;
+    font-weight: 400;
+  }
 }
 
 .rowStar{
@@ -42,13 +55,15 @@
   }
 }
 
-.bestseller{
+.orange-btn{
   background: $primaryBg;
-  padding: 0px 10px;
-  padding-top: 10px;
-  border-radius: 5%;
+  border-radius: 5px;
   font-weight: bold;
-  margin-right: 10px;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  @include font();
+  padding: 10px 15px;
 }
 
 .createdBy{
@@ -120,19 +135,6 @@
     font-weight: 600;
     margin-bottom: 15px;
   }
-  a {
-    color: #FFC000;
-    width: 100%;
-    height: 45px;
-    background-color: transparent;
-    border: #FFC000 solid 2px;
-    padding: 5px 2px;
-  }
-
-  a:hover {
-    background-color: #FF8A00;
-    color: white;
-  }
 
   .oldPrice {
     font-size: 18px !important;
@@ -143,7 +145,11 @@
   
 }
 
-.registBtn {
+.buy-now-container{
+  position: relative;
+}
+
+.buy-now-btn {
   // color:  
   color: black !important;
 
@@ -154,6 +160,9 @@
   // style
   font-size: 14px !important;
   font-style: medium !important;
+  background-color: #FFFFFF;
+  text-transform: none;
+  width: 100%;
 }
 
 .registBtn:hover {
@@ -165,4 +174,28 @@
   background-color: #FFC000 !important;
   color: black !important;
   box-shadow: 1px #979797;
+  width: 240px;
+  height: 45px;
+  border: #FFC000 solid 2px;
+  padding-top: 2px;
+  text-transform: none;
+  &:hover {
+    background-color: #FF8A00;
+    color: white !important;
+  }
 }
+
+.add-love-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-love-btn{
+  height: auto;
+  color: #000000;
+  padding-top: 2px;
+  & i{
+    vertical-align: middle;
+  }
+}
+
