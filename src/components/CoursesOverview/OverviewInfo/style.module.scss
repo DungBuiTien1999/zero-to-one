@@ -1,7 +1,7 @@
 @import '../../../styles/config';
 
 .playerwrapper{
-  background: rgba(0, 0, 0, 0.6) !important;
+  background-color: #0D1C45 !important;
   margin: 0 !important;
   width: 100%;
   padding: 10px 0px !important;
@@ -20,17 +20,12 @@
   background-color: transparent;
   color: white;
   font-weight: bold;
-
-  i{
-    color: #FFC000  !important;
-  }
 }
 
 .namecourse{
-  color: white;
-  font-weight: bold;
-  float: right !important;
-  font-size: 16px;
+  color: #FCD302;
+  font-weight: 900;
+  font-size: 40px;
 }
 
 .rowStar{
@@ -84,12 +79,20 @@
   }
 }
 
+.card {
+  width: 86% !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  border-radius: 19px !important;
+  box-shadow: 2px 4px !important;
+}
 
 .playImage{
-  opacity: 0.8;
+  width: 100% !important;
+  opacity: 0.8 !important;
   background-color: black;
-  //border-radius: 7.5%;
-  position: relative;
+  border-radius: 19px !important;
+  position: relative !important;
 
   a{
     color: white;
@@ -104,19 +107,20 @@
 
   img{
    height: 235px !important;
-   //border-radius: 10% !important;
+   width: 100% !important;
    object-fit: cover;
+   border-radius: 19px !important;
   }
 }
 
 
-.price{
-  h5{
+.price {
+  h5 {
     color: black;
     font-weight: 600;
     margin-bottom: 15px;
   }
-  a{
+  a {
     color: #FFC000;
     width: 100%;
     height: 45px;
@@ -125,9 +129,40 @@
     padding: 5px 2px;
   }
 
-  a:hover{
+  a:hover {
     background-color: #FF8A00;
     color: white;
   }
+
+  .oldPrice {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    text-decoration: line-through;
+    color: #979797 !important;
+  }
   
+}
+
+.registBtn {
+  // color:  
+  color: black !important;
+
+  // layout
+  margin-top: 12px !important;
+  border: black solid 1px !important;
+
+  // style
+  font-size: 14px !important;
+  font-style: medium !important;
+}
+
+.registBtn:hover {
+  background-color: none !important;
+  opacity: 0.8 !important;
+}
+
+.addToShopBtn {
+  background-color: #FFC000 !important;
+  color: black !important;
+  box-shadow: 1px #979797;
 }
