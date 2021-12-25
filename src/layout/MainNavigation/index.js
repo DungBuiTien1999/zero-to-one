@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import classes from './style.module.scss';
 import { Link } from 'react-router-dom';
 import StudentNavbar from './studentNavbar';
-import LecturerNavbar from './lecturerNavbar';
-import AdminNavbar from './adminNavbar';
 import GuestNavbar from './guestNavbar';
-import SearchNavbar from './searchNavbar';
 import { useEffect } from 'react';
-import {ROLE_STUDENT, ROLE_LECTURER, ROLE_ADMIN} from '../../redux/constants/common'; 
+import { ROLE_STUDENT } from '../../redux/constants/common'; 
 
 function MainNavigation() {
   const [header, setHeader] = useState({
@@ -24,39 +21,44 @@ function MainNavigation() {
     setHeader({ isAuth: isauth, role: role, fullname: username, img_source: ""});
   },[])
 
-  // console.log(header);
-
   return (
     <nav className={classes.header}>
       <div className="nav-wrapper">
 
         <ul id="nav-mobile" className="left hide-on-med-and-down">
           <li>
-            <Link to="/">
+            <Link to="/" className={classes.logo}>
               <img src='assets/images/header/Logo.png' alt="logo header" />
             </Link>
           </li>
+          <li>
+            <Link to='/login' className={`waves-light btn ${classes.module}`}>
+              Khóa Học
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup" className={`waves-effect waves-light btn ${classes.module}`}>
+              Doanh Nghiệp
+            </Link>
+          </li>
+          <li>
+            <Link to="/signup" className={`waves-effect waves-light btn ${classes.module}`}>
+              Bảng xếp hạng
+            </Link>
+          </li>
+          <li className={classes.search}>
+            <form style={{ display: "flex", position: "relative" }}>
+              <input type="text" placeholder="Tìm kiếm khóa học"/>
+              <i className={`material-icons  ${classes.searchIcon}`}>search</i>
+            </form>
+          </li>
         </ul>
-
-        {/* Đã/Chưa đăng nhập - Student + Guest */}
-        {
-          !header.isAuth  || (header.isAuth && +header.role === ROLE_STUDENT)
-          ? <SearchNavbar/>
-          : <div></div>
-        }
 
         {/* Chưa đăng nhập */}
         { !header.isAuth && <GuestNavbar /> }
 
         {/*Đã đăng nhập - Student */}
         { header.isAuth && +header.role === ROLE_STUDENT && <StudentNavbar {...header}/> }
-
-        {/*Đã đăng nhập - Lecturer */}
-        { header.isAuth && header.role === ROLE_LECTURER && <LecturerNavbar {...header}/> }
-
-        {/*Đã đăng nhập - Admin */}
-        { header.isAuth && header.role === ROLE_ADMIN && <AdminNavbar {...header}/> }
-
       </div>
     </nav>
   );

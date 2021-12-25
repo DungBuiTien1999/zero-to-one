@@ -2,9 +2,122 @@
 
 .header {
   width: 100%;
-  padding: 10px 30px;
+  padding: 10px 20px;
   background-color: transparent;
-  .logo {
-    margin-left: 100px;
+}
+
+.logo {
+  margin-right: 15px !important;
+  img {
+    height:  auto; 
+    object-fit: contain;
+
+    @media (max-width: $small-and-down) {
+      // styles for small screens and down
+      width: 50x !important;
+    }
+    @media (min-width: $medium-and-up) {
+      // styles for medium screens and larger
+      width: 70x !important;
+    }
+    @media (max-width: $medium-and-down) {
+      // styles for medium screens and down
+      width: 80px !important;
+    }
+    @media (min-width: $large-and-up) {
+      // styles for large screens and up
+      width: 100px !important;
+    }
+    @media (min-width: $extra-large-and-up) {
+      // styles for extra large screens and up
+      width: 100px !important;
+    }
   }
 }
+
+.module{
+  // Color
+  background: none !important;
+  color:#0E1B44 !important;
+
+  // layout-position
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0px 25px 21px 0px !important;
+  padding: 0px !important;
+
+  // style
+  text-transform: capitalize !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.search {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  margin-right: 25px !important;
+  margin-top: 5px !important;
+
+  input {
+    // color
+    background-color: #FDD400 !important;
+    color: #979797 !important;
+
+    // layout
+    border-radius: 15px !important;
+    border: none !important;
+    padding-left: 48px !important;
+    height: 39px !important;
+    
+    // style
+    font-size: 15px !important;
+
+    @media (max-width: $small-and-down) {
+      // styles for small screens and down
+      width: 50x !important;
+    }
+    @media (min-width: $medium-and-up) {
+      // styles for medium screens and larger
+      width: 100x !important;
+    }
+    @media (max-width: $medium-and-down) {
+      // styles for medium screens and down
+      width: 150px !important;
+    }
+    @media (min-width: $large-and-up) {
+      // styles for large screens and up
+      width: 200px !important;
+    }
+    @media (min-width: $extra-large-and-up) {
+      // styles for extra large screens and up
+      width: 341.39px !important;
+    }
+  }
+
+  input:focus{
+    border-bottom: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  input::placeholder{
+    color: #979797 !important;
+  }
+
+  .searchIcon {
+    // color
+    color: #979797 !important;
+
+    // layout
+    position: absolute;
+    top: -24%;
+    left: 6%;
+
+    // style
+    font-size: 20px !important;
+  }
+}
+
