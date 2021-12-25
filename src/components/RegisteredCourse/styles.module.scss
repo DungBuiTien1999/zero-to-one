@@ -1,11 +1,15 @@
 @import '../../styles/config';
 
 .title {
-    font-size: 35px;
-    color: $primaryColor;
-    font-weight: 500;
+    background: linear-gradient(to right, #FF8A00, #FFC000 );
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
     margin-top: 50px;
     margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 158.34%;
+    width: fit-content;
 }
 
 .courseList {
@@ -42,6 +46,11 @@
             font-size: 18px;
             font-weight: bold;
             height: 39.59px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            -webkit-box-orient: vertical;
         }
         .lettor {
             color: gray;

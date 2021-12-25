@@ -1,19 +1,23 @@
 @import '../../styles/config';
 
 .title {
-    font-size: 35px;
-    color: $primaryColor;
-    font-weight: 500;
+    background: linear-gradient(to right, #FF8A00, #FFC000 );
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
     margin-top: 50px;
     margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 158.34%;
+    width: fit-content;
 }
-
 .catList {
     display: flex;
 }
 
 .categoriCard {
-    background: $primaryBg;
+    // background: $primaryBg;
+    background-color: #FCD500;
     width: 232px;
     height: 51px;
     margin-left: 3em;

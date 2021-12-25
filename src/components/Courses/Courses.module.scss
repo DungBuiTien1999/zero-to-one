@@ -8,20 +8,24 @@
 }
 
 .title {
-    color: $primaryColor;
+    background: linear-gradient(to right, #FF8A00, #FFC000 );
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
     margin-top: 50px;
     margin-bottom: 30px;
-    font-weight: 500;
+    font-style: normal;
+    font-weight: 700;
     font-size: 35px;
-    line-height: 158.34%;
+    line-height: 130%;
 }
 
 .btnSeeAll {
-    width: 120px;
-    height: 36px;
+    width: 150px;
+    height: 42px;
     left: 1086px;
     top: 1295.31px;
 
+    margin-top: 40px;
     background: #FFFFFF;
     border: 2.5px solid #FF9A62;
     box-sizing: border-box;
@@ -38,10 +42,12 @@
     padding-bottom: 20px;
 }
 
-.swiperSlide:hover{
+.swiperSlide:hover{  
     cursor: pointer !important;
 }
 
+
 .mySwiper{
-    height: 380px;
+    height: 320px;
+    margin-right: 0px;
 }

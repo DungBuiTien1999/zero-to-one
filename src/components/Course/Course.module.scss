@@ -2,14 +2,15 @@
 
 .card {
   font-weight: bold;
-  width: 273px;
-  height: 331px;
+  width: 260px;
+  height: 310px;
   margin-left: 3em;
   color: black;
   background: #FFFFFF;
   border: 0.849241px solid #EFEFEF;
   box-shadow: 0px 3.39696px 3.39696px rgba(0, 0, 0, 0.25);
   border-radius: 21.231px;
+  
   cursor: pointer;
   img {
     width: 100%;
@@ -23,7 +24,7 @@
     position: absolute;
     width: 119.74px;
     height: 24.63px;
-    left: 15px;
+    left: 55px;
     top: 144px ;
   
     background: #FCD500;
@@ -41,7 +42,7 @@
     padding: 0.2rem 1rem;
 
     .title {
-      margin: 10px;
+      margin: 5px;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -49,15 +50,16 @@
       -webkit-box-orient: vertical;
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 15px;
       /* or 25px */
 
-      text-align: justify;
+      // text-align: justify;
     }
     .lecturer {
       font-size: 15px;
       color: gray;
       margin: 0;
+      font-weight: normal;
     }
     .description {
       display: flex;
@@ -81,6 +83,7 @@
       .students {
         display: flex;
         align-items: center;
+        font-weight: normal;
 
         p {
           // margin-right: 5px;
@@ -107,5 +110,8 @@
 }
 
 .card:first-child {
-  margin-left: 0;
+  margin-left: 18px;
 }
+
+
+

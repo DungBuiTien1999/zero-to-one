@@ -32,14 +32,14 @@ const Courses = ({ title, courses }) => {
       <div className={classes.rowTitle}>
         <h3 className={classes.title}>{title}</h3>
         <div className={classes.btnSeeAll}>
-          See all
+          Xem tất cả
           <i class="material-icons">arrow_forward</i>
         </div>
       </div>
       <section className={classes.listCourse}>
-      <Swiper
+        <Swiper
             slidesPerView={4}
-            spaceBetween={25}
+            spaceBetween={0}
             slidesPerGroup={2}
             loop={true}
             loopFillGroupWithBlank={true}
