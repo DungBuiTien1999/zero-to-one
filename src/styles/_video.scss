@@ -1,5 +1,13 @@
-.demo-course-video {
-    width: 100vw;
-    height: 100vh;
-    background-color: aquamarine;
+.v-container {
+    position: relative;
+    width: 100%;
+}
+.v-left {
+    width: 60%;
+    margin: 0 3rem;
+    
+}
+.video-course{
+    width: 100%;
+    height: 500px;
 }
