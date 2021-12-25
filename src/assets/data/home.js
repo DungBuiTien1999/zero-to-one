@@ -2,13 +2,17 @@ export const latestCourses = [
     {
         id: 1,
         title: "Khóa học Javascript cho người mới bắt đầu",
-        lecturer: "lecturer demo",
+        lecturer: "Mi Du",
         rating: 4.5,
         total_student: 10000,
         price: 2000000,
         img_source: "assets/images/course/course1.png",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 2,
@@ -19,7 +23,11 @@ export const latestCourses = [
         price: 2000000,
         img_source: "assets/images/course/course2.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình mobile"
+        },
     },
     {
         id: 3,
@@ -30,7 +38,11 @@ export const latestCourses = [
         price: 2000000,
         img_source: "assets/images/course/course3.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 4,
@@ -41,7 +53,11 @@ export const latestCourses = [
         price: 2000000,
         img_source: "assets/images/course/course4.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 5,
@@ -52,7 +68,11 @@ export const latestCourses = [
         price: 2000000,
         img_source: "assets/images/course/course5.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 6,
@@ -63,7 +83,11 @@ export const latestCourses = [
         price: 2000000,
         img_source: "assets/images/course/course6.png",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 2,
+            name: "Lập trình mobile"
+        },
     },
 ]
 
@@ -77,7 +101,11 @@ export const mostViewCourses = [
         price: 2000000,
         img_source: "assets/images/course/course7.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 2,
@@ -88,7 +116,11 @@ export const mostViewCourses = [
         price: 2000000,
         img_source: "assets/images/course/course4.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 3,
@@ -99,7 +131,11 @@ export const mostViewCourses = [
         price: 2000000,
         img_source: "assets/images/course/course8.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 2,
+            name: "Lập trình mobile"
+        },
     },
     {
         id: 4,
@@ -110,7 +146,11 @@ export const mostViewCourses = [
         price: 2000000,
         img_source: "assets/images/course/course1.png",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 5,
@@ -121,7 +161,11 @@ export const mostViewCourses = [
         price: 2000000,
         img_source: "assets/images/course/course3.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 6,
@@ -132,7 +176,11 @@ export const mostViewCourses = [
         price: 2000000,
         img_source: "assets/images/course/course5.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
 ]
 
@@ -146,7 +194,11 @@ export const hotCourses = [
         price: 2000000,
         img_source: "assets/images/course/course6.png",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 2,
@@ -157,7 +209,11 @@ export const hotCourses = [
         price: 2000000,
         img_source: "assets/images/course/course7.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình mobile"
+        },
     },
     {
         id: 3,
@@ -168,7 +224,11 @@ export const hotCourses = [
         price: 2000000,
         img_source: "assets/images/course/course8.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 4,
@@ -179,7 +239,11 @@ export const hotCourses = [
         price: 2000000,
         img_source: "assets/images/course/course1.png",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 5,
@@ -190,7 +254,11 @@ export const hotCourses = [
         price: 2000000,
         img_source: "assets/images/course/course2.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình web"
+        },
     },
     {
         id: 6,
@@ -201,7 +269,11 @@ export const hotCourses = [
         price: 2000000,
         img_source: "assets/images/course/course3.jpg",
         isBestseller: true,
-        discount: 20
+        discount: 20,
+        category: {
+            _id: 1,
+            name: "Lập trình mobile"
+        },
     },
 ]
 
