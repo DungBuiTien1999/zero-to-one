@@ -7,12 +7,14 @@ const VideoCourse = () => {
   const location = useLocation();
   const stateLocation = location.state;
 
+  const [courseTitle, setCourseTitle] = useState();
   const [chapters, setChapters] = useState();
   const [currentVideo, setCurrentVideo] = useState();
   const HtmlToReactParser = HtmlToReact.Parser;
   const htmlToReactParser = new HtmlToReactParser();
 
   useEffect(() => {
+    setCourseTitle(myCourses[stateLocation.course_id - 1].title);
     setChapters(myCourses[stateLocation.course_id - 1].chapters);
     if (myCourses[stateLocation.course_id - 1].chapters) {
       for (const chapter of myCourses[stateLocation.course_id - 1].chapters) {
@@ -34,6 +36,11 @@ const VideoCourse = () => {
 
   return (
     <Layout>
+      {
+        courseTitle && (
+          <h1>{courseTitle}</h1>
+        )
+      }
       <div className="v-container">
         {currentVideo && (
           <section className="v-left">
