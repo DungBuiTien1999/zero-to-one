@@ -14,14 +14,23 @@ const VideoCourse = () => {
 
   useEffect(() => {
     setChapters(myCourses[stateLocation.course_id - 1].chapters);
-    setCurrentVideo(
-      myCourses[stateLocation.course_id - 1].chapters[0].videos[0]
-    );
+    if (myCourses[stateLocation.course_id - 1].chapters) {
+      for (const chapter of myCourses[stateLocation.course_id - 1].chapters) {
+        if (chapter.isCurrent) {
+          for (const video of chapter.videos) {
+            if (video.isCurrent) {
+              setCurrentVideo(video);
+              break;
+            }
+          }
+        }
+      }
+    }
   }, [stateLocation]);
 
   const onClickSubVideo = (video) => {
     setCurrentVideo(video);
-  }
+  };
 
   return (
     <Layout>
@@ -53,10 +62,7 @@ const VideoCourse = () => {
                     <ul>
                       {chapter.videos.map((video) => (
                         <li onClick={() => onClickSubVideo(video)}>
-                          <img
-                            src={video.thumbail}
-                            alt={video.title}
-                          />
+                          <img src={video.thumbail} alt={video.title} />
                           <p>{video.title}</p>
                         </li>
                       ))}
