@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import HtmlToReact from 'html-to-react';
 import Layout from '../../layout/Layout';
 import { myCourses } from '../../assets/data/home';
+import 'font-awesome/css/font-awesome.min.css';
 const VideoCourse = () => {
   const location = useLocation();
   const stateLocation = location.state;
@@ -38,7 +39,7 @@ const VideoCourse = () => {
     <Layout>
       {
         courseTitle && (
-          <h1>{courseTitle}</h1>
+          <h1 className="v-title">{courseTitle}</h1>
         )
       }
       <div className="v-container">
@@ -53,9 +54,9 @@ const VideoCourse = () => {
                 allowFullScreen
                 ng-show="showvideo"
               ></iframe>
-              <h3>{currentVideo.title}</h3>
-              <h3>Description</h3>
-              <div>{htmlToReactParser.parse(currentVideo.description)}</div>
+              <h3 className="v-s-title">{currentVideo.title}</h3>
+              <h3 className="v-s1-title">Description</h3>
+              <div  className="v-description">{htmlToReactParser.parse(currentVideo.description)}</div>
             </div>
           </section>
         )}
@@ -64,13 +65,17 @@ const VideoCourse = () => {
             <div className="list-chapter">
               {chapters.map((chapter) => (
                 <div className="chapter-item">
-                  <p className="chapter-title">{chapter.title}</p>
+                  <p className="chapter-title">
+                    <i className="fa fa-angle-down"></i>
+                    {chapter.title}</p>
                   <div className="chapter-videos">
                     <ul>
                       {chapter.videos.map((video) => (
-                        <li onClick={() => onClickSubVideo(video)}>
-                          <img src={video.thumbail} alt={video.title} />
-                          <p>{video.title}</p>
+
+                        <li className="chapter-body" onClick={() => onClickSubVideo(video)}>
+                           <i className="fa fa-check-circle"></i>
+                          <img className="video" src={video.thumbail} alt={video.title} />
+                          <p className="video-title">{video.title}</p>
                         </li>
                       ))}
                     </ul>
