@@ -15,26 +15,27 @@ export default function CourseOverview(props) {
     M.Tabs.init(el, {});
   };
 
+  const commonInfo = [
+    {number: "8,290 +", title: "Đăng kí"},
+    {number: "≈ 350", title: "Video + Bài tập"},
+    {number: "200", title: "Nhận xét"},
+    {number: "4.8/5.0", title: "Đánh giá"}
+  ]
+
   return (
     <div className="row">
       <div className={`col m12 ${classes["common-info-container"]}`}>
         <ul>
-          <li>
-            <span className={classes["number"]}>8,290 +</span>
-            <span className={classes["title "]}>Đăng kí</span>
-          </li>
-          <li>
-            <span className={classes["number"]}>350</span>
-            <span className={classes["title "]}>Video + Bài tập</span>
-          </li>
-          <li>
-            <span className={classes["number"]}>200</span>
-            <span className={classes["title"]}>Nhận xét</span>
-          </li>
-          <li>
-            <span className={classes["number"]}>4.8/5.0</span>
-            <span className={classes["title"]}>Đánh giá</span>
-          </li>
+          {
+            commonInfo.map((item, index) => {
+              return (
+                <li key={index}>
+                  <span className={classes["number"]}>{item.number}</span>
+                  <span className={classes["title"]}>{item.title}</span>
+                </li>
+              )
+            })
+          }
         </ul>
       </div>
       <div id="overview" className="col m12">
