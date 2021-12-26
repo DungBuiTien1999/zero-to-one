@@ -8,3 +8,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.fakeUI {
+  margin: 0 !important;
+  img {
+    width: 100% !important;
+    height: auto;
+    object-fit: contain;
+  }
+}

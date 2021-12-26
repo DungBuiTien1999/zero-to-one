@@ -1,0 +1,24 @@
+@import "styles/course-detail/mixins";
+
+.container {
+  @include section-container;
+  background: #ffffff;
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 35px 50px;
+}
+
+.title {
+  @include section-title;
+  &__icon {
+    @include title-icon;
+    transform: rotate(180deg);
+  }
+}
+
+.list-content{
+  display: flex;
+  flex-wrap: wrap;
+}
