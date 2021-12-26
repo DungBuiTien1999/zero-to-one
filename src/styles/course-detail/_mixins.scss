@@ -1,0 +1,19 @@
+
+@mixin section-container {
+  margin-top: 50px;
+}
+
+@mixin section-title{
+  background-color: #FCD302;
+  color: #000000;
+  font-size: 32px;
+  font-weight: 700;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+@mixin title-icon {
+  color: #FF0000;
+  margin-right: 10px;
+}
