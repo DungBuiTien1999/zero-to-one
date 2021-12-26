@@ -4,6 +4,7 @@ import M from "materialize-css/dist/js/materialize.min.js";
 import Overview from "./Overview/index";
 import Content from "./Content/index";
 import Feedback from "./Feedback/index";
+import Introduction from "./Introduction";
 
 export default function CourseOverview(props) {
   useEffect(function () {
@@ -37,6 +38,11 @@ export default function CourseOverview(props) {
             })
           }
         </ul>
+      </div>
+      <div id="introduction" className="col m10 offset-m1">
+        <div className="section">
+          <Introduction />
+        </div>
       </div>
       <div id="overview" className="col m12">
         <div className="section">

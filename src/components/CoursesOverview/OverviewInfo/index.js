@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import currency from "currency.js";
 import { useDispatch, useSelector } from "react-redux";
 import * as actionType from "../../../redux/constants/actionTypes";
-import burstSaleImage from "../../../assets/images/course-detail/foundation_burst-sale.png";
-import cursorHandClickImage from "../../../assets/images/course-detail/clarity_cursor-hand-click-line.png";
+import burstSaleImage from "assets/images/course-detail/foundation_burst-sale.png";
+import cursorHandClickImage from "assets/images/course-detail/clarity_cursor-hand-click-line.png";
 
 export default function OverviewInfo(props) {
   const dispatch = useDispatch();
