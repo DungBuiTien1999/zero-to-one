@@ -15,15 +15,16 @@ const Course = ({ title, lecturer, rating, total_student, price, img_source, dis
           <div className={classes.rating}>
             <StarRatings rating={+rating}
                     starRatedColor="#FCD302"
-                    name='rating' starDimension="15px" starSpacing="0"/>
+                    name='rating' starDimension="12px" starSpacing="0"/>
           </div>
           <div className={classes.fence}></div>
           <div className={classes.students}>
-            <p>{total_student}+ lượt đăng ký</p>
+            <p>{ currency(+total_student, { separator: ',', symbol: '', precision: 0 }).format() }+ lượt đăng ký</p>
           </div>
         </div>
-        {+discount !== 0 && <span className={classes.realPrice}>{currency(+price - (+price*(+discount)/100), { separator: ',', symbol: '', precision: 0 }).format()} VND</span> }
-        <span className={+discount !== 0 && classes.salePrice}>{currency(price, { separator: ',', symbol: '', precision: 0 }).format()} VND</span>
+
+        { +discount !== 0 && <span className={classes.realPrice}>{currency(+price - (+price*(+discount)/100), { separator: ',', symbol: '', precision: 0 }).format()} VND</span> }
+        <span className={ +discount !== 0 && classes.salePrice}>{currency(price, { separator: ',', symbol: '', precision: 0 }).format() } VND</span>
       </div>
     </article>
 );

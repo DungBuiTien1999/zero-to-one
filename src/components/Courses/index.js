@@ -28,7 +28,6 @@ const Courses = ({ title, courses }) => {
 
   return (
     <Fragment>
-      
       <div className={classes.rowTitle}>
         <h3 className={classes.title}>{title}</h3>
         <div className={classes.btnSeeAll}>
@@ -36,6 +35,7 @@ const Courses = ({ title, courses }) => {
           <i class="material-icons">arrow_forward</i>
         </div>
       </div>
+      
       <section className={classes.listCourse}>
         <Swiper
             slidesPerView={4}
