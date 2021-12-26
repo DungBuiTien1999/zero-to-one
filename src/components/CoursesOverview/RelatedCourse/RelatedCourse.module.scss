@@ -1,0 +1,62 @@
+@import '../../../styles/config';
+
+.rowBackground {
+    width: 100%;
+    background: #0D1C45;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 709px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+}
+
+.title {
+    // background: linear-gradient(to right, #FF8A00, #FFC000 );
+	// background-clip: text;
+	// -webkit-text-fill-color: transparent;
+    // margin-top: 50px;
+    color: #FCD500;
+    margin-bottom: 114px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+    padding-top: 48px;
+}
+
+.btnSeeAll {
+    width: 150px;
+    height: 42px;
+    left: 1086px;
+    top: 1295.31px;
+
+    margin-top: 30px;
+    background: #FFFFFF;
+    border: 2.5px solid #FF9A62;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    color: #FF9A62;
+}
+
+.listCourse {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding: 50px;
+    width: 1272px;
+}
+
+.swiperSlide:hover{  
+    cursor: pointer !important;
+}
+
+
+.mySwiper{
+    height: 320px !important;
+    margin-right: 0px !important;
+    position: relative !important;
+}

@@ -1,114 +1,56 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import * as actionType from '../../../redux/constants/actionTypes';
-import RowCourse from '../../../components/RowCourse';
+import React, { Fragment } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Course from '../../Course';
+import classes from './RelatedCourse.module.scss';
 
-const RelatedCourse = (props) => {
-  const relatedCourse = useSelector(state => state.relatedCourse);
-  const [isLoading, setLoading] = useState(true);
-  const dispatch = useDispatch();
+// import Swiper core and required modules
+import SwiperCore, { Pagination, Navigation } from 'swiper/core';
+import { useHistory } from 'react-router-dom';
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
 
-  useEffect(function () {
-    if (props.category_id > 0) {
-      dispatch({
-        type: actionType.FETCH_RELATED_COURSE,
-        payload: {
-          category_id: props.category_id,
-        }
-      })
-    }
-  }, [dispatch, props])
+const RelatedCourse = ({ title, courses }) => {
+  const history = useHistory();
 
-  useEffect(function () {
-    if (!relatedCourse.isLoading) {
-      setLoading(false);
-    }
-  }, [relatedCourse.isLoading])
+  const viewDetailCourse = (course_id) => {
+    history.push({
+      pathname: '/course-overview',
+      state: {
+        course_id: course_id,
+      },
+    });
+  };
 
   return (
-    <div className="row">
-      <div className="row">
-        <div className="col m10 offset-m1">
-          
-          <Link className="waves-light btn" 
-            to={{
-              pathname: "/course-of-category",
-              state: {
-                category_id: props.category_id,
-                category_name: props.category_name
-              },
+    <Fragment>
+      <div className={classes.rowBackground}>
+      <h3 className={classes.title}>{title}</h3>
+      <section className={classes.listCourse}>
+        <Swiper
+            slidesPerView={4}
+            spaceBetween={0}
+            slidesPerGroup={2}
+            loop={true}
+            loopFillGroupWithBlank={true}
+            pagination={{
+              clickable: true,
             }}
+            navigation={true}
+            className={classes.mySwiper}
           >
-            <i className="material-icons right">arrow_forward</i>
-            Khám phá thêm
-          </Link>
-
-          {
-            isLoading
-              ?
-              <div className="progress">
-                <div className="indeterminate" />
-              </div>
-              :
-              <div className="progress">
-                <div className="determinate" style={{ width: "100%" }} />
-              </div>
-          }
-        </div>
+            {courses.map((course) => (
+              <SwiperSlide
+                key={course.id}
+                onClick={() => viewDetailCourse(course.id)}
+                className={classes.swiperSlide}
+              >
+                <Course {...course} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+      </section>
       </div>
-      <div className="row">
-        <div className="col m10 offset-m1">
-          {
-            !isLoading
-            &&
-            relatedCourse.data.length > 0
-            &&
-            relatedCourse.data.map(item => {
-              return (
-                item.id === props.course_id
-                  ? <div></div>
-                  : 
-                  <div className="card" key={item.id}>
-                    <div className="card-content">
-                      <RowCourse 
-                        data={{ 
-                          ...item, 
-                          author: item.fullname, 
-                          avg_vote:+item.avg_vote,
-                          image: {img_source: item.course_img_source}
-                        }} 
-                    />
-                    </div>
-                  </div>
-              )
-            })
-          }
-
-          {
-            !isLoading
-            &&
-            !relatedCourse.hasError
-            &&
-            relatedCourse.data.length === 0
-            &&
-            <div >
-              <h5 className="center-align blue-text text-darken-2" style={{ fontWeight: "bold !important" }}>Chưa có dữ liệu</h5>
-            </div>
-          }
-
-          {
-            !isLoading
-            &&
-            relatedCourse.hasError
-            &&
-            <div >
-              <h5 className="center-align blue-text text-darken-2" style={{ fontWeight: "bold !important" }}>Đã có lỗi xảy ra</h5>
-            </div>
-          }
-        </div>
-      </div>
-    </div>
+    </Fragment>
   );
 };
 

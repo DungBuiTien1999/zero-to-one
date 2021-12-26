@@ -3,8 +3,9 @@ import Layout from '../../layout/Layout';
 import OverviewInfo from '../../components/CoursesOverview/OverviewInfo';
 import CourseDetail from '../../components/CoursesOverview/CourseDetail';
 import { useLocation } from 'react-router-dom';
-// import RelatedCourse from '../../components/CoursesOverview/RelatedCourse';
+import RelatedCourse from '../../components/CoursesOverview/RelatedCourse';
 import { courseOverviews } from "../../assets/data/course-detail";
+import { latestCourses, } from "../../assets/data/home";
 
 const CourseOverview = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const CourseOverview = () => {
         category_name: overviewData.category_name,
         course_id: overviewData.id
       }}/> */}
+      <RelatedCourse courses={ latestCourses } title='Khóa học liên quan' />
     </Layout>
   );
 };
