@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-//import classes from './style.module.scss';
+import styles from './style.module.scss';
 import './style.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import Chapter from './Chapter';
@@ -17,11 +17,15 @@ export default function Content(props) {
   return (
     <div className="row">
       <div className="col m10 offset-m1">
+        <div className={styles["title"]}>
+          <span class={`material-icons ${styles["title__icon"]}`}>collections_bookmark</span>
+          <span className={styles["text"]}>Nội dung khóa học</span>
+        </div>
         <ul className="collapsible popout">
           {
             props.chapters &&
             props.chapters.map(chapter =>
-              <li key= {chapter.chapter_id}>
+              <li key= {chapter.chapter_id} style={{margin: "0"}}>
                 <div className="collapsible-header">
                   <Chapter {...chapter}/>
                 </div>

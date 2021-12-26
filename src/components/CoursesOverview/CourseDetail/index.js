@@ -5,6 +5,7 @@ import Overview from "./Overview/index";
 import Content from "./Content/index";
 import Feedback from "./Feedback/index";
 import Introduction from "./Introduction";
+import DemoProducts from "./DemoProducts";
 
 export default function CourseOverview(props) {
   useEffect(function () {
@@ -44,17 +45,19 @@ export default function CourseOverview(props) {
           <Introduction />
         </div>
       </div>
-      <div id="overview" className="col m12">
-        <div className="section">
-          <Overview {...props.overviewData} />
-        </div>
-      </div>
-      <div id="content" className="col m12">
+      <div id="content" className="col m12" style={{marginTop: "50px"}}>
         <div className="section">
           <Content {...{ chapters: props.chapters }} />
         </div>
       </div>
-      <div id="feedback" className="col m12">
+      {props.children}
+      <DemoProducts />
+      {/* <div id="overview" className="col m12">
+        <div className="section">
+          <Overview {...props.overviewData} />
+        </div>
+      </div> */}
+      {/* <div id="feedback" className="col m12">
         <div className="section">
           <Feedback
             {...{
@@ -64,7 +67,7 @@ export default function CourseOverview(props) {
             }}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
