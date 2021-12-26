@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import currency from "currency.js";
 import { useDispatch, useSelector } from "react-redux";
 import * as actionType from "../../../redux/constants/actionTypes";
+import burstSaleImage from "../../../assets/images/course-detail/foundation_burst-sale.png";
+import cursorHandClickImage from "../../../assets/images/course-detail/clarity_cursor-hand-click-line.png";
 
 export default function OverviewInfo(props) {
   const dispatch = useDispatch();
@@ -55,12 +57,13 @@ export default function OverviewInfo(props) {
       {/* Header video */}
       <div className={`row ${classes.controlheader}`}>
         <div className="col m6 offset-m1" style={{ marginRight: "25px" }}>
-          <div className="row">
+          <div className={`row ${classes["category-name-container"]}`}>
             {/* eslint-disable-next-line */}
             <a className={classes.backcouse}>
-              <i className="material-icons left">arrow_back</i>
+              {/* <i className="material-icons left">arrow_back</i> */}
               {props.category.name}
             </a>
+            <span className="material-icons">chevron_right</span>
           </div>
           <div className="row">
             <span className={`${classes["course__name"]}`}>{props.title}</span>
@@ -76,9 +79,11 @@ export default function OverviewInfo(props) {
             <span>&ensp;Cập nhật lần cuối vào lúc {props.last_update}</span>
           </div>
 
-          <div className={`row`}>
-            <button className={classes["orange-btn"]}>Best Seller</button>
-          </div>
+          {props.isBestseller && (
+            <div className={`row`}>
+              <button className={classes["orange-btn"]}>Best Seller</button>
+            </div>
+          )}
         </div>
 
         <div className="col m4">
@@ -102,32 +107,44 @@ export default function OverviewInfo(props) {
               <div className={`card-content ${classes.price}`}>
                 {props.discount > 0 ? (
                   <>
-                    <h5>
-                      {currency(
-                        props.price - props.price * props.discount * 0.01,
-                        { separator: ",", symbol: "", precision: 0 }
-                      ).format()}{" "}
-                      VND
-                    </h5>
-                    <h5 className={classes.oldPrice}>
+                    <div className={classes["price-container"]}>
+                      <div className={classes["price-discount-container"]}>
+                        <span className={classes["price-now"]}>
+                          {currency(
+                            props.price - props.price * props.discount * 0.01,
+                            { separator: ",", symbol: "", precision: 0 }
+                          ).format()}{" "}
+                          VND
+                        </span>
+                        <span className={classes["discount"]}>
+                          {props.discount}%
+                        </span>
+                      </div>
+                      <img
+                        src={burstSaleImage}
+                        alt=""
+                        className={classes["burst-sale"]}
+                      />
+                    </div>
+                    <span className={classes.oldPrice}>
                       {currency(props.price, {
                         separator: ",",
                         symbol: "",
                         precision: 0,
                       }).format()}{" "}
                       VND
-                    </h5>
+                    </span>
                   </>
                 ) : (
                   <>
-                    <h5>
+                    <span>
                       {currency(props.price, {
                         separator: ",",
                         symbol: "",
                         precision: 0,
                       }).format()}{" "}
                       VND
-                    </h5>
+                    </span>
                   </>
                 )}
 
@@ -141,17 +158,23 @@ export default function OverviewInfo(props) {
                         Thêm vào giỏ
                       </Link>
                       <div className={classes.watchlist}>
-                        <a className={`waves-light btn ${classes["custom-love-btn"]}`} onClick={updateListFavorite}>
-                          <i className="material-icons center">favorite_border</i>
+                        <a
+                          className={`waves-light btn ${classes["custom-love-btn"]}`}
+                          onClick={updateListFavorite}
+                        >
+                          <i className="material-icons center">
+                            favorite_border
+                          </i>
                         </a>
                       </div>
                     </div>
                     <div className={classes["buy-now-container"]}>
                       <Link
-                          to="/video-course"
-                          className={`waves-light btn ${classes["buy-now-btn"]}`}
-                        >
-                          Mua Ngay
+                        to="/video-course"
+                        className={`waves-light btn ${classes["buy-now-btn"]}`}
+                      >
+                        Mua Ngay
+                        <img src={cursorHandClickImage} alt="" />
                       </Link>
                     </div>
                   </>
