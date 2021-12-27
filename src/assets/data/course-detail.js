@@ -13,11 +13,13 @@ export const courseOverviews = [
     num_rating: 4,
     rating_detail:{
       amount: 300,//
-      oneStar: 0,
-      twoStar: 0,
-      threeStar: 50,
-      fourStar: 200,
-      fiveStar: 50,
+      stars:[
+        0,// 1 sao
+        0,//2 sao
+        50,//3 sao
+        200,//4 sao 
+        50,//5 sao
+      ]
     },
     num_feedback: 0,
     num_register: 1000000,
@@ -128,11 +130,13 @@ export const courseOverviews = [
     num_rating: 4,
     rating_detail:{
       amount: 300,//
-      oneStar: 0,
-      twoStar: 0,
-      threeStar: 50,
-      fourStar: 200,
-      fiveStar: 50,
+      stars:[
+        0,
+        0,
+        50,
+        200,
+        50,
+      ]
     },
     num_feedback: 0,
     num_register: 1000000,
@@ -217,11 +221,13 @@ export const courseOverviews = [
     num_rating: 4,
     rating_detail:{
       amount: 300,//
-      oneStar: 0,
-      twoStar: 0,
-      threeStar: 50,
-      fourStar: 200,
-      fiveStar: 50,
+      stars:[
+        0,
+        0,
+        50,
+        200,
+        50,
+      ]
     },
     num_feedback: 0,
     num_register: 1000000,
