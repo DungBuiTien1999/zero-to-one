@@ -8,6 +8,8 @@ import Introduction from "./Introduction";
 import DemoProducts from "./DemoProducts";
 
 export default function CourseOverview(props) {
+  const {overviewData} = props;
+  const {demoProducts} = overviewData;
   useEffect(function () {
     initTabs();
   });
@@ -51,7 +53,7 @@ export default function CourseOverview(props) {
         </div>
       </div>
       {props.children}
-      <DemoProducts />
+      <DemoProducts products={demoProducts}/>
       {/* <div id="overview" className="col m12">
         <div className="section">
           <Overview {...props.overviewData} />

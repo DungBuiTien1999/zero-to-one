@@ -1,3 +1,4 @@
+
 export const courseOverviews = [
   {
     id: 1,
@@ -17,6 +18,32 @@ export const courseOverviews = [
     course_img_title: "course-image",
     price: 2000000,
     discount: 90,
+    demoProducts: [
+      {
+        id: 0,
+        name: "Máy tính",
+        image: "assets/images/course-detail/demo-products/course1-calculator.png",
+        description: "Sản phẩm đánh giá học viên thông hiểu javascirpt ở mức cơ bản",
+      },
+      {
+        id: 1,
+        name: "Dự báo thời tiết",
+        image: "assets/images/course-detail/demo-products/course1-weather.png",
+        description: "Sản phẩm đánh giá học viên thông hiểu javascirpt ở mức nâng cao",
+      },
+      {
+        id: 2,
+        name: "Đồng hồ kỹ thuật số",
+        image: "assets/images/course-detail/demo-products/course1-watch.png",
+        description: "Sản phẩm đánh giá học viên thông hiểu javascirpt ở mức cơ bản",
+      },
+      {
+        id: 3,
+        name: "Game caro",
+        image: "assets/images/course-detail/demo-products/course1-caro-game.png",
+        description: "Sản phẩm đánh giá học viên thông hiểu javascirpt ở mức nâng cao",
+      }
+    ],
     chapters: [
       {
         chapter_id: 1,

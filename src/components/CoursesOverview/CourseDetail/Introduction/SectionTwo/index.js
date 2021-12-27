@@ -13,7 +13,7 @@ const SectionTwo = () => {
   return (
     <div className={styles["container"]}>
       <div className={styles["title"]}>
-        <span class={`material-icons ${styles["title__icon"]}`}>tungsten</span>
+        <span className={`material-icons ${styles["title__icon"]}`}>tungsten</span>
         <span className={styles["text"]}>Những gì bạn sẽ học</span>
       </div>
       <div className={styles["list-content"]}>
