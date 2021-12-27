@@ -34,7 +34,7 @@ const Rating = (props) => {
           ratingDetail.stars.map((item, index) => {
             const percent = Math.round((item/ratingDetail.amount) * 10000) / 100;
             return (
-              <div className={styles["rating-item"]}>
+              <div className={styles["rating-item"]} key={index}>
                 <span className={styles["star"]}>{index + 1} sao</span>
                 <div className={styles["bar"]}>
                   <div className={styles["progress-bar"]} style={{width: `${percent}%`}}></div>
