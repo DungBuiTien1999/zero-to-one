@@ -1,6 +1,6 @@
 .container {
   background-color: #0d1c45;
-  padding: 50px 120px;
+  padding: 50px 120px 30px 120px;
 }
 
 .title-container {
@@ -15,4 +15,10 @@
   font-style: normal;
   font-weight: bold;
   font-size: 44px;
+}
+
+.products-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }

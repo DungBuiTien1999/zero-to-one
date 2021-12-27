@@ -18,7 +18,7 @@ export default function Content(props) {
     <div className="row">
       <div className="col m10 offset-m1">
         <div className={styles["title"]}>
-          <span class={`material-icons ${styles["title__icon"]}`}>collections_bookmark</span>
+          <span className={`material-icons ${styles["title__icon"]}`}>collections_bookmark</span>
           <span className={styles["text"]}>Nội dung khóa học</span>
         </div>
         <ul className="collapsible popout">

@@ -4,7 +4,7 @@ const SectionOne = () => {
   return (
     <div className={styles["container"]}>
       <div className={styles["title"]}>
-        <span class={`material-icons ${styles["title__icon"]}`}>description</span>
+        <span className={`material-icons ${styles["title__icon"]}`}>description</span>
         <span className={styles["text"]}>Giới thiệu khóa học</span>
       </div>
       <div className={styles["content"]}>

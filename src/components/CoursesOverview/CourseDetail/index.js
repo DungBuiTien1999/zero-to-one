@@ -6,8 +6,12 @@ import Content from "./Content/index";
 import Feedback from "./Feedback/index";
 import Introduction from "./Introduction";
 import DemoProducts from "./DemoProducts";
+import ShowFeedback from "./ShowFeedback";
+import lectureInfoImage from "assets/images/course-detail/lecturer-info.png";
 
 export default function CourseOverview(props) {
+  const {overviewData} = props;
+  const {demoProducts} = overviewData;
   useEffect(function () {
     initTabs();
   });
@@ -51,23 +55,22 @@ export default function CourseOverview(props) {
         </div>
       </div>
       {props.children}
-      <DemoProducts />
-      {/* <div id="overview" className="col m12">
+      <DemoProducts products={demoProducts}/>
+      <div className={classes["lecturer-info"]}>
+          <img src={lectureInfoImage} alt=""/>
+      </div>
+      <div id="feedback" className="col m12">
         <div className="section">
-          <Overview {...props.overviewData} />
-        </div>
-      </div> */}
-      {/* <div id="feedback" className="col m12">
-        <div className="section">
-          <Feedback
+          <ShowFeedback />
+          {/* <Feedback
             {...{
               course_id: props.course_id,
               isFeedbacked: props.overviewData.isFeedbacked,
               isRegister: props.overviewData.isRegister,
             }}
-          />
+          /> */}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

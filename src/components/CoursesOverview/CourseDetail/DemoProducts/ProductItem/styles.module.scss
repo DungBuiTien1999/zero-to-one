@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  max-width: 485px;
+  height: 209px;
+  background: #ffffff;
+  border: 1px solid #efefef;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  flex: 50%;
+  margin-bottom: 50px;
+}
+
+.item {
+  &__name-image {
+    background: #fcd500;
+    border: 1px solid #efefef;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    & .name {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      color: #000000;
+      margin: 30px auto 30px 35px !important;
+    }
+
+    & .image {
+      width: 148px;
+      height: 140px;
+      border-radius: 25px;
+      border: 1px solid #efefef;
+      background-color: #ffffff;
+      & img {
+        width: 148px;
+        height: 140px;
+      }
+    }
+  }
+
+  &__description {
+    padding: 20px 35px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+}
