@@ -5,7 +5,10 @@ const ShowFeedback = (props) => {
   const {data} = props;
   const {numRating, ratingDetail} = data;
   return (
-    <div>
+    <div className={styles["container"]}>
+      <div className={styles["title"]}>
+        <span>Đánh giá</span>
+      </div>
       <Rating numRating={numRating} ratingDetail={ratingDetail}/>
     </div>
   )
