@@ -6,6 +6,7 @@ import Content from "./Content/index";
 import Feedback from "./Feedback/index";
 import Introduction from "./Introduction";
 import DemoProducts from "./DemoProducts";
+import ShowFeedback from "./ShowFeedback";
 import lectureInfoImage from "assets/images/course-detail/lecturer-info.png";
 
 export default function CourseOverview(props) {
@@ -58,17 +59,18 @@ export default function CourseOverview(props) {
       <div className={classes["lecturer-info"]}>
           <img src={lectureInfoImage} alt=""/>
       </div>
-      {/* <div id="feedback" className="col m12">
+      <div id="feedback" className="col m12">
         <div className="section">
-          <Feedback
+          <ShowFeedback />
+          {/* <Feedback
             {...{
               course_id: props.course_id,
               isFeedbacked: props.overviewData.isFeedbacked,
               isRegister: props.overviewData.isRegister,
             }}
-          />
+          /> */}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
