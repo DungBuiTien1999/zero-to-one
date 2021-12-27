@@ -11,3 +11,82 @@
     width: 100%;
     height: 500px;
 }
+
+.v-container {
+    position: relative;
+    width: 100%;
+}
+.v-left {
+    width: 60%;
+    margin: 0 3rem;
+    
+}
+.video-course{
+    width: 100%;
+    height: 500px;
+}
+
+.v-title {
+    font-size: 32px !important;
+    font-weight: bold;
+    text-align: center !important;
+}
+
+.v-s-title {
+    font-size: 32px !important;
+    font-weight: bold;
+}
+
+.v-s1-title {
+    font-size: 24px !important;
+    font-weight: bold;
+}
+
+.v-description {
+    font-size: 18px !important;
+}
+.v-container {
+    display: flex; /* or inline-flex */
+  }
+
+.chapter-title {
+    font-size: 20px !important;
+    font-weight: bold;
+    background: #EAEAEA;
+    display:table-cell; 
+    vertical-align:middle;
+    width: 500px;
+    height: 65px;
+    background: #EAEAEA;
+    padding-left: 15px !important;
+}
+
+.video-title {
+    position: absolute;
+    height: 65px;
+    font-size: 14px !important;
+    font-weight: bold;
+    margin-top: auto !important;
+}
+
+.video-body{
+    background: #F5F5F5;
+    position:relative;
+}
+
+.fa {
+    margin-right: 10px;
+}
+
+.fa-check-circle{
+    font-size: 30px !important;
+    color: #0FA958;
+    position: absolute;
+    height:120px;
+    padding-top: 60px;
+}
+
+.video {
+    padding-left: 35px;
+    width: 60%;
+}

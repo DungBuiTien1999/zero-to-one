@@ -25,6 +25,7 @@ const RegisteredCourse = ({ courses, title }) => {
                 <div className={classes.content}>
                   <h6 className={classes.name}>{course.title}</h6>
                   <p className={classes.lettor}>{course.lecturer}</p>
+                  <p className={classes.progress}>{`${course.progress}%`}</p>
                   <ProgressBar progress={course.progress} height={20} />
                 </div>
               </div>
@@ -39,7 +40,7 @@ const RegisteredCourse = ({ courses, title }) => {
 const ProgressBar = ({ progress, height }) => {
   const Parentdiv = {
     height: height,
-    width: '90%',
+    width: '97%',
     backgroundColor: 'whitesmoke',
     borderRadius: 40,
     margin: 5,
@@ -63,7 +64,7 @@ const ProgressBar = ({ progress, height }) => {
   return (
     <div style={Parentdiv}>
       <div style={Childdiv}>
-        <span style={progresstext}>{`${progress}%`}</span>
+        <span style={progresstext}></span>
       </div>
     </div>
   );

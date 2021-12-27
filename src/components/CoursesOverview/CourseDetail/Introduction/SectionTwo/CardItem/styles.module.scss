@@ -1,0 +1,12 @@
+.container{
+  display: flex;
+  max-width: 450px;
+  align-items: flex-start;
+  padding: 0 100px 30px 0;
+}
+
+.tick-icon{
+  width: 38px;
+  margin-right: 30px;
+  object-fit: contain;
+}

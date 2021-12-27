@@ -1,22 +1,21 @@
-@import '../../styles/config';
+@import '../../../styles/config';
 
-.rowTitle {
+.rowBackground {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #0D1C45;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 709px;
 }
 
 .title {
-    background: linear-gradient(to right, #FF8A00, #FFC000 );
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    color: #FCD500;
+    margin-bottom: 100px;
     font-style: normal;
     font-weight: 700;
-    font-size: 35px;
+    font-size: 45px;
     line-height: 130%;
+    text-align: center;
+    padding-top: 78px;
 }
 
 .btnSeeAll {
@@ -40,6 +39,8 @@
 .listCourse {
     margin: 0 auto;
     padding-bottom: 20px;
+    padding: 50px;
+    width: 1272px;
 }
 
 .swiperSlide:hover{  

@@ -1,1 +1,10 @@
 @import "../style.module.scss";
+@import "styles/course-detail/mixins";
+
+.title {
+  @include section-title;
+  &__icon {
+    @include title-icon;
+    transform: rotate(180deg);
+  }
+}

@@ -82,35 +82,40 @@ $linkColor: #FFC000;
 
 .swiper-button-next, .swiper-button-prev {
   color: black !important;
-  width: 42.17px;
-  height: 42.17px;
+  width: 35px !important;
+  height: 35px !important;
   background-color: #FCD500;
   border-radius: 50%;
+  top: 48% !important;
 }
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  left: 0px;
-  right: auto;
 }
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-  right: 0px;
-  left: auto;
+  // right: 0px;
+  // left: auto;
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
   bottom: -15px;
   left: 0;
   width: 100%;
+  z-index: 1 !important;
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
 }
 
-// .swiper-button-next {
-//   position: absolute !important;
-//   right: 40px;
-// }
+.swiper-button-next {
+  right: 0% !important;
+  z-index: 1000 !important;
+}
+
+.swiper-button-prev {
+  left: 0% !important;
+  z-index: 1000 !important;
+}
 
 .swiper-pagination-bullet-active {
   background: #FF8A00 !important;

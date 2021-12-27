@@ -8,3 +8,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.fakeUI {
+  margin: 0 !important;
+  img {
+    width: 100% !important;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.certificate-container{
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6F6F6;
+  padding: 55px 75px;
+  & img:nth-child(1){
+    width: 510px;
+  }
+   & img:nth-child(2){
+     width: 500px;
+   }
+}

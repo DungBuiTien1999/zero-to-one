@@ -130,10 +130,12 @@
 
 
 .price {
-  h5 {
+  padding: 0px 24px 24px !important;
+  &-now {
     color: black;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 26px;
+    font-family: 'Roboto';
   }
 
   .oldPrice {
@@ -141,12 +143,20 @@
     font-weight: 400 !important;
     text-decoration: line-through;
     color: #979797 !important;
+    display: block;
+    margin-bottom: 25px;
   }
   
 }
 
 .buy-now-container{
   position: relative;
+  & img{
+    position: absolute;
+    width: 22px;
+    top: 17px;
+    right: 30px;
+  }
 }
 
 .buy-now-btn {
@@ -163,6 +173,7 @@
   background-color: #FFFFFF;
   text-transform: none;
   width: 100%;
+  padding-right: 50px;
 }
 
 .registBtn:hover {
@@ -194,8 +205,47 @@
   height: auto;
   color: #000000;
   padding-top: 2px;
+  &:hover{
+    background-color: #FFFFFF;
+    & i{
+        color: #FF0000;
+    }
+  }
   & i{
     vertical-align: middle;
+    &:hover{
+      color: #FF0000;
+    }
   }
 }
 
+.burst-sale{
+  width: 60px;
+  object-fit: contain;
+}
+
+.price-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.discount{
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 10px;
+  background-color: #FF0000;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.price-discount-container{
+  display: flex;
+  align-items: center;
+}
+
+.category-name-container{
+  display: flex;
+  align-items: flex-start;
+}
