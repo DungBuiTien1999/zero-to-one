@@ -111,7 +111,7 @@ const VideoCourse = () => {
                             src={video.thumbail}
                             alt={video.title}
                           />
-                          <p className="video-title">{video.title}</p>
+                          <p className={`video-title ${video.isCurrent ? "current-video" : ""}`}>{video.title}</p>
                         </li>
                       ))}
                     </ul>

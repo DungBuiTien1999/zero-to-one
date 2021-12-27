@@ -43,7 +43,7 @@
 }
 
 .v-description {
-    font-size: 18px !important;
+    font-size: 16px !important;
 }
 .v-container {
     display: flex; /* or inline-flex */
@@ -69,6 +69,10 @@
     margin-top: auto !important;
 }
 
+.current-video {
+    color: rgb(238, 196, 118) !important;
+}
+
 .video-body{
     background: #F5F5F5;
     position:relative;
@@ -83,7 +87,7 @@
     color: #0FA958;
     position: absolute;
     height:120px;
-    padding-top: 60px;
+    padding-top: 15px;
 }
 
 .fa-circle{
@@ -91,12 +95,12 @@
     // color: #0FA958;
     position: absolute;
     height:120px;
-    padding-top: 60px;
+    padding-top: 15px;
 }
 
 .video {
     padding-left: 35px;
-    width: 60%;
+    width: 35%;
 }
 
 .v-hiden {
@@ -126,4 +130,8 @@
 
 .v-comments {
     width: 100%;
+}
+
+.chapter-body:hover {
+    transform: scale(1.02);
 }
