@@ -11,6 +11,16 @@ export const courseOverviews = [
     short_description: "Bạn muốn bắt đầu với lập trình web, bạn muốn bắt đầu với javascript. Khóa học này là một lựa chọn tuyệt vời để có một nền tảng vững chắc trước khi bước vào thế giới web ",
     isBestseller: true,
     num_rating: 4,
+    rating_detail:{
+      amount: 300,//
+      stars:[
+        0,// 1 sao
+        0,//2 sao
+        50,//3 sao
+        200,//4 sao 
+        50,//5 sao
+      ]
+    },
     num_feedback: 0,
     num_register: 1000000,
     last_update: "03/2021",
@@ -118,6 +128,16 @@ export const courseOverviews = [
     short_description: "You, me and him",
     isBestseller: true,
     num_rating: 4,
+    rating_detail:{
+      amount: 300,//
+      stars:[
+        0,
+        0,
+        50,
+        200,
+        50,
+      ]
+    },
     num_feedback: 0,
     num_register: 1000000,
     last_update: "Yesterday",
@@ -199,6 +219,16 @@ export const courseOverviews = [
     short_description: "You, me and him",
     isBestseller: true,
     num_rating: 4,
+    rating_detail:{
+      amount: 300,//
+      stars:[
+        0,
+        0,
+        50,
+        200,
+        50,
+      ]
+    },
     num_feedback: 0,
     num_register: 1000000,
     last_update: "Yesterday",

@@ -1,0 +1,17 @@
+.container{
+  background-color: #F6F6F6;
+  padding: 55px 75px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    color: #0d1c45;
+  }
+}
