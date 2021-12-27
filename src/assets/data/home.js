@@ -294,6 +294,7 @@ export const myCourses = [
         id: 1,
         title: 'Getting Started',
         isCurrent: true,
+        isShow: true,
         videos: [
           {
             id: 1,
@@ -424,6 +425,7 @@ export const myCourses = [
         id: 2,
         title: 'Getting Started 2',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -554,6 +556,7 @@ export const myCourses = [
         id: 3,
         title: 'Getting Started 3',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -684,6 +687,7 @@ export const myCourses = [
         id: 4,
         title: 'Getting Started 4',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -814,6 +818,7 @@ export const myCourses = [
         id: 5,
         title: 'Getting Started 5',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -944,6 +949,7 @@ export const myCourses = [
         id: 6,
         title: 'Getting Started 6',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -1074,6 +1080,7 @@ export const myCourses = [
         id: 7,
         title: 'Getting Started 7',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -1218,6 +1225,7 @@ export const myCourses = [
         id: 1,
         title: 'Getting Started',
         isCurrent: true,
+        isShow: true,
         videos: [
           {
             id: 1,
@@ -1348,6 +1356,7 @@ export const myCourses = [
         id: 2,
         title: 'Getting Started 2',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -1478,6 +1487,7 @@ export const myCourses = [
         id: 3,
         title: 'Getting Started 3',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -1608,6 +1618,7 @@ export const myCourses = [
         id: 4,
         title: 'Getting Started 4',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -1738,6 +1749,7 @@ export const myCourses = [
         id: 5,
         title: 'Getting Started 5',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -1868,6 +1880,7 @@ export const myCourses = [
         id: 6,
         title: 'Getting Started 6',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -1998,6 +2011,7 @@ export const myCourses = [
         id: 7,
         title: 'Getting Started 7',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -2142,6 +2156,7 @@ export const myCourses = [
         id: 1,
         title: 'Getting Started',
         isCurrent: true,
+        isShow: true,
         videos: [
           {
             id: 1,
@@ -2272,6 +2287,7 @@ export const myCourses = [
         id: 2,
         title: 'Getting Started 2',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -2402,6 +2418,7 @@ export const myCourses = [
         id: 3,
         title: 'Getting Started 3',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -2532,6 +2549,7 @@ export const myCourses = [
         id: 4,
         title: 'Getting Started 4',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -2662,6 +2680,7 @@ export const myCourses = [
         id: 5,
         title: 'Getting Started 5',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -2792,6 +2811,7 @@ export const myCourses = [
         id: 6,
         title: 'Getting Started 6',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -2922,6 +2942,7 @@ export const myCourses = [
         id: 7,
         title: 'Getting Started 7',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -3066,6 +3087,7 @@ export const myCourses = [
         id: 1,
         title: 'Getting Started',
         isCurrent: true,
+        isShow: true,
         videos: [
           {
             id: 1,
@@ -3196,6 +3218,7 @@ export const myCourses = [
         id: 2,
         title: 'Getting Started 2',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -3326,6 +3349,7 @@ export const myCourses = [
         id: 3,
         title: 'Getting Started 3',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -3456,6 +3480,7 @@ export const myCourses = [
         id: 4,
         title: 'Getting Started 4',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -3586,6 +3611,7 @@ export const myCourses = [
         id: 5,
         title: 'Getting Started 5',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -3716,6 +3742,7 @@ export const myCourses = [
         id: 6,
         title: 'Getting Started 6',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
@@ -3846,6 +3873,7 @@ export const myCourses = [
         id: 7,
         title: 'Getting Started 7',
         isCurrent: false,
+        isShow: false,
         videos: [
           {
             id: 1,
