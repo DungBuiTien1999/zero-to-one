@@ -46,7 +46,7 @@ export default function Video(props) {
     className: 'react-player',
     url: props.video_source,
     width: "100%",
-    height: "100%",
+    height: "400px",
     controls: true,
     pip: true,
     config: {
@@ -88,7 +88,7 @@ export default function Video(props) {
               props.isPreview
               &&
               <div id={props.video_id} className={`modal ${classes.styleModal}`}>
-                <div className="modal-content">
+                <div className='modal-content'>
                   <ReactPlayer {...configReactPlayer} />
                 </div>
               </div>

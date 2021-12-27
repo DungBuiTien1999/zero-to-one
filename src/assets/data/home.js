@@ -46,7 +46,7 @@ export const latestCourses = [
   },
   {
     id: 4,
-    title: 'Khóa học Javascript cho người mới bắt đầu',
+    title: 'Khóa học web cho beginer',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
@@ -94,12 +94,42 @@ export const latestCourses = [
 export const mostViewCourses = [
   {
     id: 1,
-    title: 'Build Web Apps with React & Firebase',
-    lecturer: 'lecturer demo',
+    title: 'Khóa học Javascript cho người mới bắt đầu',
+    lecturer: 'Mi Du',
+    rating: 4,
+    total_student: 10000,
+    price: 2000000,
+    img_source: 'assets/images/course/course1.png',
+    isBestseller: true,
+    discount: 90,
+    category: {
+      _id: 1,
+      name: 'Lập trình web',
+    },
+  },
+  {
+    id: 2,
+    title: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
+    lecturer: 'Mi Du',
+    rating: 4,
+    total_student: 10000,
+    price: 2000000,
+    img_source: 'assets/images/course/course2.jpg',
+    isBestseller: true,
+    discount: 20,
+    category: {
+      _id: 1,
+      name: 'Lập trình mobile',
+    },
+  },
+  {
+    id: 3,
+    title: 'Angular - The Complete Guide (2022 Edition)',
+    lecturer: 'Mi Du',
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course7.jpg',
+    img_source: 'assets/images/course/course3.jpg',
     isBestseller: true,
     discount: 20,
     category: {
@@ -108,8 +138,8 @@ export const mostViewCourses = [
     },
   },
   {
-    id: 2,
-    title: '100 Days Of Code - Web Development Bootcamp [2022]',
+    id: 4,
+    title: 'Khóa học web cho beginer',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
@@ -123,53 +153,8 @@ export const mostViewCourses = [
     },
   },
   {
-    id: 3,
-    title: 'iOS & Swift - The Complete iOS App Development Bootcamp',
-    lecturer: 'lecturer demo',
-    rating: 4.5,
-    total_student: 10000,
-    price: 2000000,
-    img_source: 'assets/images/course/course8.jpg',
-    isBestseller: true,
-    discount: 20,
-    category: {
-      _id: 2,
-      name: 'Lập trình mobile',
-    },
-  },
-  {
-    id: 4,
-    title: 'Khóa học Javascript cho người mới bắt đầu',
-    lecturer: 'lecturer demo',
-    rating: 4.5,
-    total_student: 10000,
-    price: 2000000,
-    img_source: 'assets/images/course/course1.png',
-    isBestseller: true,
-    discount: 20,
-    category: {
-      _id: 1,
-      name: 'Lập trình web',
-    },
-  },
-  {
     id: 5,
     title: '100 Days Of Code - Web Development Bootcamp [2022]',
-    lecturer: 'lecturer demo',
-    rating: 4.5,
-    total_student: 10000,
-    price: 2000000,
-    img_source: 'assets/images/course/course3.jpg',
-    isBestseller: true,
-    discount: 20,
-    category: {
-      _id: 1,
-      name: 'Lập trình web',
-    },
-  },
-  {
-    id: 6,
-    title: 'Khóa học Javascript cho người mới bắt đầu',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
@@ -182,12 +167,9 @@ export const mostViewCourses = [
       name: 'Lập trình web',
     },
   },
-];
-
-export const hotCourses = [
   {
-    id: 1,
-    title: 'Khóa học Javascript cho người mới bắt đầu',
+    id: 6,
+    title: 'iOS & Swift - The Complete iOS App Development Bootcamp',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
@@ -196,18 +178,36 @@ export const hotCourses = [
     isBestseller: true,
     discount: 20,
     category: {
+      _id: 2,
+      name: 'Lập trình mobile',
+    },
+  },
+];
+
+export const hotCourses = [
+  {
+    id: 1,
+    title: 'Khóa học Javascript cho người mới bắt đầu',
+    lecturer: 'Mi Du',
+    rating: 4,
+    total_student: 10000,
+    price: 2000000,
+    img_source: 'assets/images/course/course1.png',
+    isBestseller: true,
+    discount: 90,
+    category: {
       _id: 1,
       name: 'Lập trình web',
     },
   },
   {
     id: 2,
-    title: 'iOS & Swift - The Complete iOS App Development Bootcamp',
-    lecturer: 'lecturer demo',
-    rating: 4.5,
+    title: 'React - The Complete Guide (incl Hooks, React Router, Redux)',
+    lecturer: 'Mi Du',
+    rating: 4,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course7.jpg',
+    img_source: 'assets/images/course/course2.jpg',
     isBestseller: true,
     discount: 20,
     category: {
@@ -217,12 +217,12 @@ export const hotCourses = [
   },
   {
     id: 3,
-    title: '100 Days Of Code - Web Development Bootcamp [2022]',
-    lecturer: 'lecturer demo',
+    title: 'Angular - The Complete Guide (2022 Edition)',
+    lecturer: 'Mi Du',
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course8.jpg',
+    img_source: 'assets/images/course/course3.jpg',
     isBestseller: true,
     discount: 20,
     category: {
@@ -232,12 +232,12 @@ export const hotCourses = [
   },
   {
     id: 4,
-    title: 'Khóa học Javascript cho người mới bắt đầu',
+    title: 'Khóa học web cho beginer',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course1.png',
+    img_source: 'assets/images/course/course4.jpg',
     isBestseller: true,
     discount: 20,
     category: {
@@ -247,12 +247,12 @@ export const hotCourses = [
   },
   {
     id: 5,
-    title: '100 Days Of Code - Web Development Bootcamp [2022] Super Sale',
+    title: '100 Days Of Code - Web Development Bootcamp [2022]',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course2.jpg',
+    img_source: 'assets/images/course/course5.jpg',
     isBestseller: true,
     discount: 20,
     category: {
@@ -267,11 +267,11 @@ export const hotCourses = [
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course3.jpg',
+    img_source: 'assets/images/course/course6.png',
     isBestseller: true,
     discount: 20,
     category: {
-      _id: 1,
+      _id: 2,
       name: 'Lập trình mobile',
     },
   },
@@ -302,7 +302,7 @@ export const myCourses = [
             isCurrent: false,
             progress: 100,
             thumbail: 'assets/images/course/course6.png',
-            linkVideo: 'https://www.youtube.com/embed/w7ejDZ8SWv8',
+            linkVideo: 'https://www.youtube.com/embed/q6LDBBms7TY',
             description: `<p>React.js is THE most popular JavaScript library you can use and learn these days to build modern, reactive user interfaces for the web.</p>
                         <p>This course teaches you React in-depth, from the ground up, step by step by diving into all the core basics, exploring tons of examples and also introducing you to advanced concepts as well.</p>
                         <p>You'll get all the theory, tons of examples and demos, assignments and exercises and tons of important knowledge that is skipped by most other resources - after all, there is a reason why this course is that huge! :)</p>
@@ -384,7 +384,7 @@ export const myCourses = [
             isCurrent: false,
             progress: 0,
             thumbail: 'assets/images/course/course6.png',
-            linkVideo: 'https://www.youtube.com/embed/xziG5NURQu0',
+            linkVideo: 'https://www.youtube.com/embed/e2-hyMc3l-E',
             description: `<p>React.js is THE most popular JavaScript library you can use and learn these days to build modern, reactive user interfaces for the web.</p>
                         <p>This course teaches you React in-depth, from the ground up, step by step by diving into all the core basics, exploring tons of examples and also introducing you to advanced concepts as well.</p>
                         <p>You'll get all the theory, tons of examples and demos, assignments and exercises and tons of important knowledge that is skipped by most other resources - after all, there is a reason why this course is that huge! :)</p>
@@ -474,7 +474,7 @@ export const myCourses = [
             isCurrent: false,
             progress: 0,
             thumbail: 'assets/images/course/course6.png',
-            linkVideo: 'https://www.youtube.com/embed/w7ejDZ8SWv8',
+            linkVideo: 'https://www.youtube.com/watch?v=e2-hyMc3l-E',
             description: `<p>React.js is THE most popular JavaScript library you can use and learn these days to build modern, reactive user interfaces for the web.</p>
                         <p>This course teaches you React in-depth, from the ground up, step by step by diving into all the core basics, exploring tons of examples and also introducing you to advanced concepts as well.</p>
                         <p>You'll get all the theory, tons of examples and demos, assignments and exercises and tons of important knowledge that is skipped by most other resources - after all, there is a reason why this course is that huge! :)</p>
@@ -4006,22 +4006,22 @@ export const myCourses = [
 export const hotCategories = [
   {
     id: 1,
-    category_name: 'Javascript',
+    category_name: 'Lập trình Web',
   },
   {
     id: 2,
-    category_name: 'NodeJs',
+    category_name: 'Lập trình Mobile',
   },
   {
     id: 3,
-    category_name: 'Typescript',
+    category_name: 'Khoa học dữ liệu',
   },
   {
     id: 4,
-    category_name: 'ReactJs',
+    category_name: 'Học Máy',
   },
   {
     id: 5,
-    category_name: 'VueJs',
+    category_name: 'AI',
   },
 ];

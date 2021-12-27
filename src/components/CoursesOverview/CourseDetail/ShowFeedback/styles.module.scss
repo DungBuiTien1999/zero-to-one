@@ -1,6 +1,12 @@
 .container{
   background-color: #F6F6F6;
   padding: 55px 75px;
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
 }
 
 .title {
