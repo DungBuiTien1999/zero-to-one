@@ -32,17 +32,17 @@ function MainNavigation() {
             </Link>
           </li>
           <li>
-            <Link to='/login' className={`waves-light btn ${classes.module}`}>
+            <Link to='/' className={`waves-light btn ${classes.module}`}>
               Khóa Học
             </Link>
           </li>
           <li>
-            <Link to="/signup" className={`waves-effect waves-light btn ${classes.module}`}>
+            <Link to="#" className={`waves-effect waves-light btn ${classes.module}`}>
               Doanh Nghiệp
             </Link>
           </li>
           <li>
-            <Link to="/signup" className={`waves-effect waves-light btn ${classes.module}`}>
+            <Link to="#" className={`waves-effect waves-light btn ${classes.module}`}>
               Bảng xếp hạng
             </Link>
           </li>

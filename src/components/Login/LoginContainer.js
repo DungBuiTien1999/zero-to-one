@@ -49,8 +49,8 @@ export default function LoginContainer() {
 
   return (
     <div className="account__container">
-      <div className="container__left-side">
-        <img className="top-img" src={topImg} alt=""></img>
+      <div className={ `container__left-side` }>
+        <img className ="top-img" src ={topImg} alt=""/>
         <div className="container-form">
           <form>
             <HeaderForm class="form-header"
