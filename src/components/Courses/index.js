@@ -11,7 +11,6 @@ import classes from './Courses.module.scss';
 // import Swiper core and required modules
 import SwiperCore, { Pagination, Navigation } from 'swiper/core';
 import { useHistory } from 'react-router-dom';
-// install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
 const Courses = ({ title, courses }) => {

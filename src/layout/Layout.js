@@ -1,11 +1,15 @@
 import MainNavigation from './MainNavigation';
 import Footer from './Footer';
+import classes from './layout.module.scss'
+import React from 'react';
 
 function Layout({ children}) {
   return (
-    <div>
+    <div style={{ padding: "0 !important", margin: "0 !important" }}>
       <MainNavigation />
-        <div style={{position:"relative"}}>{children}</div>
+      <div className = { classes.container }>
+        { children }
+      </div>
       <Footer />
     </div>
   );
