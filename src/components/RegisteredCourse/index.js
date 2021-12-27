@@ -26,7 +26,7 @@ const RegisteredCourse = ({ courses, title }) => {
                   <h6 className={classes.name}>{course.title}</h6>
                   <p className={classes.lettor}>{course.lecturer}</p>
                   <p className={classes.progress}>{`${course.progress}%`}</p>
-                  <ProgressBar progress={course.progress} height={20} />
+                  <ProgressBar progress={course.progress} height={10} />
                 </div>
               </div>
             </Link>
@@ -44,14 +44,14 @@ const ProgressBar = ({ progress, height }) => {
     backgroundColor: 'whitesmoke',
     borderRadius: 40,
     margin: 5,
-    border: '1px solid #000000',
+    border: '1px solid #363636',
   };
 
   const Childdiv = {
     height: '100%',
     width: `${progress}%`,
-    backgroundColor: 'black',
-    borderRadius: 40,
+    backgroundColor: '#FCD500',
+    borderRadius: 5,
     textAlign: 'right',
   };
 
