@@ -29,7 +29,8 @@ export default function StudentNavbar(props) {
   }
   return (
     <ul className="right hide-on-med-and-down">
-      <li><Link to="/"><i className="large material-icons">notifications_none</i></Link></li>
+      <li><Link to="#"><i className="large material-icons"> shopping_cart</i></Link></li>
+      <li><Link to="#"><i className="large material-icons">notifications_none</i></Link></li>
       <li style={{ position: "relative" }}>
 
         {/* eslint-disable-next-line */}
