@@ -86,7 +86,44 @@
     padding-top: 60px;
 }
 
+.fa-circle{
+    font-size: 30px !important;
+    // color: #0FA958;
+    position: absolute;
+    height:120px;
+    padding-top: 60px;
+}
+
 .video {
     padding-left: 35px;
     width: 60%;
+}
+
+.v-hiden {
+    display: none;
+}
+
+.chapter-item {
+    cursor: pointer;
+}
+
+.v-hide-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.v-show-desc {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.v-show-desc:hover {
+    color: rgb(65, 62, 62);
+}
+
+.v-comments {
+    width: 100%;
 }

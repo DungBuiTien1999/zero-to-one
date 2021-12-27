@@ -11,6 +11,7 @@ const VideoCourse = () => {
   const [courseTitle, setCourseTitle] = useState();
   const [chapters, setChapters] = useState();
   const [currentVideo, setCurrentVideo] = useState();
+  const [showFullDes, setShowFullDes] = useState(false);
   const HtmlToReactParser = HtmlToReact.Parser;
   const htmlToReactParser = new HtmlToReactParser();
 
@@ -35,13 +36,25 @@ const VideoCourse = () => {
     setCurrentVideo(video);
   };
 
+  const onClickShowChapter = (chapter) => {
+    const index = chapters.findIndex((chap) => chap === chapter);
+    setChapters([
+      ...chapters.slice(0, index),
+      {
+        ...chapters[index],
+        isShow: !chapters[index].isShow,
+      },
+      ...chapters.slice(index + 1),
+    ]);
+  };
+
+  const onClickShowDescription = () => {
+    setShowFullDes(!showFullDes);
+  }
+
   return (
     <Layout>
-      {
-        courseTitle && (
-          <h1 className="v-title">{courseTitle}</h1>
-        )
-      }
+      {courseTitle && <h1 className="v-title">{courseTitle}</h1>}
       <div className="v-container">
         {currentVideo && (
           <section className="v-left">
@@ -56,7 +69,11 @@ const VideoCourse = () => {
               ></iframe>
               <h3 className="v-s-title">{currentVideo.title}</h3>
               <h3 className="v-s1-title">Description</h3>
-              <div  className="v-description">{htmlToReactParser.parse(currentVideo.description)}</div>
+              <div className={`v-description ${showFullDes ? "" : "v-hide-text"}`}>
+                {htmlToReactParser.parse(currentVideo.description)}
+              </div>
+              <p className='v-show-desc' onClick={onClickShowDescription}>{showFullDes ? "Show Less" : "Show More"}</p>
+              <img src="assets/images/course/comment-image.png" alt="comments" className='v-comments' />
             </div>
           </section>
         )}
@@ -65,16 +82,35 @@ const VideoCourse = () => {
             <div className="list-chapter">
               {chapters.map((chapter) => (
                 <div className="chapter-item">
-                  <p className="chapter-title">
-                    <i className="fa fa-angle-down"></i>
-                    {chapter.title}</p>
+                  <p
+                    className="chapter-title"
+                    onClick={() => onClickShowChapter(chapter)}
+                  >
+                    {chapter.isShow ? (
+                      <i className="fa fa-angle-up"></i>
+                    ) : (
+                      <i className="fa fa-angle-down"></i>
+                    )}
+                    {chapter.title}
+                  </p>
                   <div className="chapter-videos">
-                    <ul>
+                    <ul className={chapter.isShow ? '' : 'v-hiden'}>
                       {chapter.videos.map((video) => (
+                        <li
+                          className="chapter-body"
+                          onClick={() => onClickSubVideo(video)}
+                        >
+                          {video.progress === 100 ? (
+                            <i className="fa fa-check-circle"></i>
+                          ) : (
+                            <i className="fa fa-circle"></i>
+                          )}
 
-                        <li className="chapter-body" onClick={() => onClickSubVideo(video)}>
-                           <i className="fa fa-check-circle"></i>
-                          <img className="video" src={video.thumbail} alt={video.title} />
+                          <img
+                            className="video"
+                            src={video.thumbail}
+                            alt={video.title}
+                          />
                           <p className="video-title">{video.title}</p>
                         </li>
                       ))}
