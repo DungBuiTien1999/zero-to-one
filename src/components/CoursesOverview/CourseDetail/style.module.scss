@@ -99,3 +99,11 @@ li {
     background-color: transparent !important;
   }
 }
+
+.lecturer-info{
+  padding: 75px 60px;
+  background-color: #FFFFFF;
+  & img{
+    max-width: 1146px;
+  }
+}

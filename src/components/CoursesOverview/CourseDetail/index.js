@@ -6,6 +6,7 @@ import Content from "./Content/index";
 import Feedback from "./Feedback/index";
 import Introduction from "./Introduction";
 import DemoProducts from "./DemoProducts";
+import lectureInfoImage from "assets/images/course-detail/lecturer-info.png";
 
 export default function CourseOverview(props) {
   const {overviewData} = props;
@@ -54,11 +55,9 @@ export default function CourseOverview(props) {
       </div>
       {props.children}
       <DemoProducts products={demoProducts}/>
-      {/* <div id="overview" className="col m12">
-        <div className="section">
-          <Overview {...props.overviewData} />
-        </div>
-      </div> */}
+      <div className={classes["lecturer-info"]}>
+          <img src={lectureInfoImage} alt=""/>
+      </div>
       {/* <div id="feedback" className="col m12">
         <div className="section">
           <Feedback
