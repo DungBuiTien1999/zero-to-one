@@ -29,7 +29,7 @@ const CourseOverview = () => {
       <div className={classes.fakeUI}>
         {/* <img src='assets/images/course-relate.png' alt='Khóa Học Liên Quan' />  */}
       </div>
-      {/* <RelatedCourse courses={ latestCourses } title='Khóa Học Liên Quan' /> */}
+      <RelatedCourse courses={ latestCourses } title='Khóa Học Liên Quan' />
     </Layout>
   );
 };

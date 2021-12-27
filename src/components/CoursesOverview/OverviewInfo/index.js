@@ -1,56 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classes from "./style.module.scss";
 import { Link } from "react-router-dom";
 import currency from "currency.js";
-import { useDispatch, useSelector } from "react-redux";
-import * as actionType from "../../../redux/constants/actionTypes";
 import burstSaleImage from "assets/images/course-detail/foundation_burst-sale.png";
 import cursorHandClickImage from "assets/images/course-detail/clarity_cursor-hand-click-line.png";
 
 export default function OverviewInfo(props) {
-  const dispatch = useDispatch();
-  const favoriteCourse = useSelector((state) => state.favoriteCourse.data);
-  const registerCourse = useSelector((state) => state.registerCourse.data);
-
-  useEffect(
-    function () {
-      dispatch({
-        type: actionType.FETCH_FAVORITE_COURSE,
-        payload: {
-          course_id: props.id,
-          isFavorite: props.isFavorite,
-        },
-      });
-
-      dispatch({
-        type: actionType.FETCH_IS_REGISTER_COURSE,
-        payload: {
-          course_id: props.id,
-          isRegister: props.isRegister,
-        },
-      });
-    },
-    [dispatch, props.isFavorite, props.isRegister, props.id]
-  );
-
-  const updateListFavorite = () => {
-    dispatch({
-      type: actionType.UPDATE_FAVORITE_COURSE,
-      payload: {
-        course_id: props.id,
-        isFavorite: !favoriteCourse.isFavorite,
-      },
-    });
-  };
-
-  const RegisterLearning = (course_id) => {
-    dispatch({
-      type: actionType.FETCH_REGISTER_COURSE,
-      payload: {
-        course_id,
-      },
-    });
-  };
 
   return (
     <div className={classes.playerwrapper}>
@@ -60,7 +15,6 @@ export default function OverviewInfo(props) {
           <div className={`row ${classes["category-name-container"]}`}>
             {/* eslint-disable-next-line */}
             <a className={classes.backcouse}>
-              {/* <i className="material-icons left">arrow_back</i> */}
               {props.category.name}
             </a>
             <span className="material-icons">chevron_right</span>
@@ -160,7 +114,6 @@ export default function OverviewInfo(props) {
                       <div className={classes.watchlist}>
                         <a
                           className={`waves-light btn ${classes["custom-love-btn"]}`}
-                          onClick={updateListFavorite}
                         >
                           <i className="material-icons center">
                             favorite_border
