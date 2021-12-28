@@ -32,7 +32,7 @@ export default function CourseOverview(props) {
   ];
 
   return (
-    <div className="row">
+    <div className="row" style={{marginBottom: "0px"}}>
       <div className={`col m12 ${classes["common-info-container"]}`}>
         <ul>
           {commonInfo.map((item, index) => {
