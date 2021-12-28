@@ -19,3 +19,8 @@
   top: 22px !important;
   height: 10px !important;
 }
+
+.disable-video{
+  filter: blur(1px);
+  cursor: not-allowed;
+}

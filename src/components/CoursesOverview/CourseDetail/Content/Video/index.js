@@ -7,6 +7,7 @@ import ReactPlayer from "react-player";
 import { timeFormart } from '../../../../../utils/helpers';
 
 export default function Video(props) {
+  console.log("is preview: ", props.isPreview);
   const dispatch = useDispatch();
   const [percent, setPercent] = useState(0);
 
@@ -66,23 +67,16 @@ export default function Video(props) {
             <li>
               {/* eslint-disable-next-line */}
               <a onClick={() => playVideo()}>
-                <i className={`material-icons ${classes.iconplay}`}>play_circle_filled</i>
+                <i className={`material-icons ${classes.iconplay} ${!props.isPreview && classes["disable-video"]}`}>
+                  play_circle_filled
+                </i>
               </a>
             </li>
             <li>
-
               <h6>{props.video_title}</h6>
             </li>
           </ul>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            {
-              props.isPreview ?
-                <li>
-                  <button data-target={props.video_id} className="btn modal-trigger">Xem thử</button>
-                </li>
-                : <li><p>&ensp;</p></li>
-            }
-
             {/* Modal Structure */}
             {
               props.isPreview
