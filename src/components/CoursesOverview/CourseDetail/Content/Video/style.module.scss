@@ -23,4 +23,5 @@
 .disable-video{
   filter: blur(1px);
   cursor: not-allowed;
+  pointer-events: none;
 }

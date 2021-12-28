@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import classes from './style.module.scss';
-import * as actionType from '../../../../../redux/constants/actionTypes';
-import M from 'materialize-css/dist/js/materialize.min.js';
+import classes from "./style.module.scss";
+import * as actionType from "../../../../../redux/constants/actionTypes";
+import M from "materialize-css/dist/js/materialize.min.js";
 import ReactPlayer from "react-player";
-import { timeFormart } from '../../../../../utils/helpers';
+import { timeFormart } from "../../../../../utils/helpers";
 
 export default function Video(props) {
-  console.log("is preview: ", props.isPreview);
   const dispatch = useDispatch();
   const [percent, setPercent] = useState(0);
 
@@ -17,34 +16,37 @@ export default function Video(props) {
         type: actionType.FETCH_VIDEO_LEARNING,
         payload: {
           video_source: props.video_source,
-          video_id: props.video_id
-        }
-      })
-      window.scrollTo(0, 0); 
+          video_id: props.video_id,
+        },
+      });
+      window.scrollTo(0, 0);
     }
-  }
-  
-  useEffect(function () {
-    if (props.status_completed === 1) {
-      setPercent(100);
-    } else if (props.status_completed === 0) {
-      const percent = (props.current_time / props.duration) * 100;
-      setPercent(percent.toFixed(0))
-    }
-  }, [props])
+  };
+
+  useEffect(
+    function () {
+      if (props.status_completed === 1) {
+        setPercent(100);
+      } else if (props.status_completed === 0) {
+        const percent = (props.current_time / props.duration) * 100;
+        setPercent(percent.toFixed(0));
+      }
+    },
+    [props]
+  );
 
   useEffect(function () {
     initModal();
-  })
+  });
 
   const initModal = () => {
-    const elems = document.querySelectorAll('.modal');
+    const elems = document.querySelectorAll(".modal");
     //eslint-disable-next-line
     const instances = M.Modal.init(elems, {});
   };
 
   let configReactPlayer = {
-    className: 'react-player',
+    className: "react-player",
     url: props.video_source,
     width: "100%",
     height: "400px",
@@ -53,10 +55,19 @@ export default function Video(props) {
     config: {
       file: {
         attributes: {
-          controlsList: 'nodownload'  //<- this is the important bit
-        }
-      }
+          controlsList: "nodownload", //<- this is the important bit
+        },
+      },
     },
+  };
+
+  const handleWatchPreviewVideo = (video_id) => {
+    const btn = document.getElementById(`btn-${video_id}`);
+    if (btn){
+      btn.click();
+    } else {
+      return;
+    }
   };
 
   return (
@@ -66,8 +77,10 @@ export default function Video(props) {
           <ul className="left">
             <li>
               {/* eslint-disable-next-line */}
-              <a onClick={() => playVideo()}>
-                <i className={`material-icons ${classes.iconplay} ${!props.isPreview && classes["disable-video"]}`}>
+              <a onClick={() => handleWatchPreviewVideo(props.video_id)} className={!props.isPreview ? classes["disable-video"]:""}>
+                <i
+                  className={`material-icons ${classes.iconplay}`}
+                >
                   play_circle_filled
                 </i>
               </a>
@@ -77,42 +90,59 @@ export default function Video(props) {
             </li>
           </ul>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
+            {props.isPreview ? (
+              <li>
+                {
+                props.isPreview && <button
+                  id={`btn-${props.video_id}`}
+                  data-target={props.video_id}
+                  className="btn modal-trigger"
+                  style={{ visibility: "hidden" }}
+                ></button>
+              }
+              </li>
+            ) : (
+              <li>
+                <p>&ensp;</p>
+              </li>
+            )}
             {/* Modal Structure */}
-            {
-              props.isPreview
-              &&
-              <div id={props.video_id} className={`modal ${classes.styleModal}`}>
-                <div className='modal-content'>
+            {props.isPreview && (
+              <div
+                id={props.video_id}
+                className={`modal ${classes.styleModal}`}
+              >
+                <div className="modal-content">
                   <ReactPlayer {...configReactPlayer} />
                 </div>
               </div>
-            }
+            )}
 
-            {
-                props.isLearning
-                &&
-                <li>
-                  <h6>{percent}%&ensp;</h6>
-                </li>
-            }
-
-            {
-              props.isLearning
-              &&
+            {props.isLearning && (
               <li>
-                <div className={`progress ${classes.progress}`} >
-                  <div className="determinate" style={{ width: `${percent}%` }} />
+                <h6>{percent}%&ensp;</h6>
+              </li>
+            )}
+
+            {props.isLearning && (
+              <li>
+                <div className={`progress ${classes.progress}`}>
+                  <div
+                    className="determinate"
+                    style={{ width: `${percent}%` }}
+                  />
                 </div>
               </li>
-            }
-            <li><p>&ensp;</p></li>
-            <li><p>{timeFormart(props.duration)}</p></li>
+            )}
+            <li>
+              <p>&ensp;</p>
+            </li>
+            <li>
+              <p>{timeFormart(props.duration)}</p>
+            </li>
           </ul>
         </div>
       </nav>
     </div>
-
-  )
-};
-
-
+  );
+}
