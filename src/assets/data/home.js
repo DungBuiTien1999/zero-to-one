@@ -21,7 +21,7 @@ export const latestCourses = [
     rating: 4,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course2.jpg',
+    img_source: 'assets/images/course/course2.png',
     isBestseller: true,
     discount: 20,
     category: {
@@ -36,7 +36,7 @@ export const latestCourses = [
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course3.jpg',
+    img_source: 'assets/images/course/course3.png',
     isBestseller: true,
     discount: 20,
     category: {
@@ -46,7 +46,7 @@ export const latestCourses = [
   },
   {
     id: 4,
-    title: 'Khóa học web cho beginer',
+    title: 'The Complete 2022 Web Development Bootcamp',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
@@ -114,7 +114,7 @@ export const mostViewCourses = [
     rating: 4,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course2.jpg',
+    img_source: 'assets/images/course/course2.png',
     isBestseller: true,
     discount: 20,
     category: {
@@ -129,7 +129,7 @@ export const mostViewCourses = [
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course3.jpg',
+    img_source: 'assets/images/course/course3.png',
     isBestseller: true,
     discount: 20,
     category: {
@@ -139,7 +139,7 @@ export const mostViewCourses = [
   },
   {
     id: 4,
-    title: 'Khóa học web cho beginer',
+    title: 'The Complete 2022 Web Development Bootcamp',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,
@@ -207,7 +207,7 @@ export const hotCourses = [
     rating: 4,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course2.jpg',
+    img_source: 'assets/images/course/course2.png',
     isBestseller: true,
     discount: 20,
     category: {
@@ -222,7 +222,7 @@ export const hotCourses = [
     rating: 4.5,
     total_student: 10000,
     price: 2000000,
-    img_source: 'assets/images/course/course3.jpg',
+    img_source: 'assets/images/course/course3.png',
     isBestseller: true,
     discount: 20,
     category: {
@@ -232,7 +232,7 @@ export const hotCourses = [
   },
   {
     id: 4,
-    title: 'Khóa học web cho beginer',
+    title: 'The Complete 2022 Web Development Bootcamp',
     lecturer: 'lecturer demo',
     rating: 4.5,
     total_student: 10000,

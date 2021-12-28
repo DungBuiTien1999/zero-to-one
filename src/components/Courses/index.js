@@ -29,10 +29,7 @@ const Courses = ({ title, courses }) => {
     <Fragment>
       <div className={classes.rowTitle}>
         <h3 className={classes.title}>{title}</h3>
-        <div className={classes.btnSeeAll}>
-          Xem tất cả
-          <i class="material-icons">arrow_forward</i>
-        </div>
+        
       </div>
       
       <section className={classes.listCourse}>
@@ -58,6 +55,10 @@ const Courses = ({ title, courses }) => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className={classes.btnSeeAll}>
+            Xem tất cả
+            <i class="material-icons">arrow_forward</i>
+          </div>
       </section>
     </Fragment>
   );
