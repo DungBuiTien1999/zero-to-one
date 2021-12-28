@@ -1,5 +1,10 @@
 @import "../../../styles/config";
 
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 .handleBtn{
   // color
   background-color: #FDD400 !important;

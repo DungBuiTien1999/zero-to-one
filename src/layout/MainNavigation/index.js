@@ -23,9 +23,9 @@ function MainNavigation() {
 
   return (
     <nav className={classes.header}>
-      <div className="nav-wrapper">
+      <div className={`nav-wrapper ${classes["header-container"]}`}>
 
-        <ul id="nav-mobile" className="left hide-on-med-and-down">
+        <ul id="nav-mobile" className={`left hide-on-med-and-down ${classes["header__left"]}`}>
           <li>
             <Link to="/" className={classes.logo}>
               <img src='assets/images/header/Logo.png' alt="logo header" />
