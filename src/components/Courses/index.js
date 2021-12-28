@@ -57,7 +57,7 @@ const Courses = ({ title, courses }) => {
           </Swiper>
           <div className={classes.btnSeeAll}>
             Xem tất cả
-            <i class="material-icons">arrow_forward</i>
+            <i className="material-icons">arrow_forward</i>
           </div>
       </section>
     </Fragment>

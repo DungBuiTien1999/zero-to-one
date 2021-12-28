@@ -1,3 +1,4 @@
+@import "styles/mixins";
 
 .container {
   display: table-footer-group;
@@ -31,10 +32,15 @@
   justify-content: space-between;
   background-color: #F6F6F6;
   padding: 55px 75px;
-  & img:nth-child(1){
-    width: 510px;
+  & img{
+    width: 47%;
   }
-   & img:nth-child(2){
-     width: 500px;
-   }
+}
+
+@include medium-sp{
+  
+}
+
+@include small-sp{
+
 }

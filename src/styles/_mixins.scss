@@ -1,0 +1,17 @@
+// @mixin pc-media() {
+//   @media (min-width: 761px) {
+//     @content;
+//   }
+// }
+
+@mixin medium-sp() {
+  @media (max-width: 699px) {
+    @content;
+  }
+}
+
+@mixin small-sp() {
+  @media (max-width: 374px) {
+    @content;
+  }
+}
