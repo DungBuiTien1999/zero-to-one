@@ -151,29 +151,25 @@
 
 .buy-now-container{
   position: relative;
+  width: 50%;
   & img{
     position: absolute;
     width: 22px;
-    top: 17px;
-    right: 30px;
+    top: 10px;
+    right: 20px;
   }
 }
 
 .buy-now-btn {
-  // color:  
   color: black !important;
-
-  // layout
-  margin-top: 12px !important;
-  border: black solid 1px !important;
-
-  // style
+  border: 2px solid #FCD302 !important;
   font-size: 14px !important;
   font-style: medium !important;
   background-color: #FFFFFF;
   text-transform: none;
   width: 100%;
-  padding-right: 50px;
+  height: 45px;
+  padding: 2px 30px 0 0;
 }
 
 .registBtn:hover {
@@ -185,11 +181,12 @@
   background-color: #FFC000 !important;
   color: black !important;
   box-shadow: 1px #979797;
-  width: 240px;
   height: 45px;
   border: #FFC000 solid 2px;
   padding-top: 2px;
   text-transform: none;
+  width: 50%;
+  margin-right: 15px;
   &:hover {
     background-color: #FF8A00;
     color: white !important;
@@ -203,16 +200,18 @@
 
 .custom-love-btn{
   height: auto;
-  color: #000000;
+  color: #FFFFFF;
   padding-top: 2px;
+  text-transform: none;
+  margin-bottom: 20px;
   &:hover{
-    background-color: #FFFFFF;
     & i{
         color: #FF0000;
     }
   }
   & i{
     vertical-align: middle;
+    margin-left: 5px;
     &:hover{
       color: #FF0000;
     }
@@ -248,4 +247,9 @@
 .category-name-container{
   display: flex;
   align-items: flex-start;
+}
+
+.button-area-container{
+  display: flex;
+  justify-content: space-between;
 }

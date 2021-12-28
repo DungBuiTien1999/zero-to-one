@@ -6,7 +6,6 @@ import burstSaleImage from "assets/images/course-detail/foundation_burst-sale.pn
 import cursorHandClickImage from "assets/images/course-detail/clarity_cursor-hand-click-line.png";
 
 export default function OverviewInfo(props) {
-
   return (
     <div className={classes.playerwrapper}>
       {/* Header video */}
@@ -14,9 +13,7 @@ export default function OverviewInfo(props) {
         <div className="col m6 offset-m1" style={{ marginRight: "25px" }}>
           <div className={`row ${classes["category-name-container"]}`}>
             {/* eslint-disable-next-line */}
-            <a className={classes.backcouse}>
-              {props.category.name}
-            </a>
+            <a className={classes.backcouse}>{props.category.name}</a>
             <span className="material-icons">chevron_right</span>
           </div>
           <div className="row">
@@ -33,11 +30,18 @@ export default function OverviewInfo(props) {
             <span>&ensp;Cập nhật lần cuối vào lúc {props.last_update}</span>
           </div>
 
-          {props.isBestseller && (
-            <div className={`row`}>
+          <div className={classes.watchlist}>
+            <a className={`waves-light btn ${classes["custom-love-btn"]}`}>
+              Yêu thích
+              <i className="material-icons center">favorite_border</i>
+            </a>
+          </div>
+
+          {/* {props.isBestseller && (
+            <div>
               <button className={classes["orange-btn"]}>Best Seller</button>
             </div>
-          )}
+          )} */}
         </div>
 
         <div className="col m4">
@@ -103,24 +107,13 @@ export default function OverviewInfo(props) {
                 )}
 
                 {
-                  <>
-                    <div className={classes["add-love-container"]}>
-                      <Link
-                        to="/video-course"
-                        className={`waves-light btn ${classes.addToShopBtn}`}
-                      >
-                        Thêm vào giỏ
-                      </Link>
-                      <div className={classes.watchlist}>
-                        <a
-                          className={`waves-light btn ${classes["custom-love-btn"]}`}
-                        >
-                          <i className="material-icons center">
-                            favorite_border
-                          </i>
-                        </a>
-                      </div>
-                    </div>
+                  <div className={classes["button-area-container"]}>
+                    <Link
+                      to="/video-course"
+                      className={`waves-light btn ${classes.addToShopBtn}`}
+                    >
+                      Thêm vào giỏ
+                    </Link>
                     <div className={classes["buy-now-container"]}>
                       <Link
                         to="/video-course"
@@ -130,7 +123,7 @@ export default function OverviewInfo(props) {
                         <img src={cursorHandClickImage} alt="" />
                       </Link>
                     </div>
-                  </>
+                  </div>
                 }
               </div>
             </div>
