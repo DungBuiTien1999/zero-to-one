@@ -10,6 +10,7 @@ const VideoCourse = () => {
 
   const [courseTitle, setCourseTitle] = useState();
   const [chapters, setChapters] = useState();
+  const [currentChapter, setCurrentChapter] = useState();
   const [currentVideo, setCurrentVideo] = useState();
   const [showFullDes, setShowFullDes] = useState(false);
   const HtmlToReactParser = HtmlToReact.Parser;
@@ -21,6 +22,7 @@ const VideoCourse = () => {
     if (myCourses[stateLocation.course_id - 1].chapters) {
       for (const chapter of myCourses[stateLocation.course_id - 1].chapters) {
         if (chapter.isCurrent) {
+          setCurrentChapter(chapter);
           for (const video of chapter.videos) {
             if (video.isCurrent) {
               setCurrentVideo(video);
@@ -32,8 +34,99 @@ const VideoCourse = () => {
     }
   }, [stateLocation]);
 
-  const onClickSubVideo = (video) => {
-    setCurrentVideo(video);
+  const onClickSubVideo = (vid, chap) => {
+    const indexChap = chapters.findIndex(
+      (chapter) => chapter === currentChapter
+    );
+    const indexVid = currentChapter.videos.findIndex(
+      (video) => video === currentVideo
+    );
+
+    const indexNextChap = chapters.findIndex((chapter) => chapter === chap);
+    const indexNextVid = chap.videos.findIndex((video) => video === vid);
+    const currentVideoClone = {
+      ...chapters[indexChap].videos[indexVid],
+              isCurrent: false,
+    }
+    const currentVideosClone = [
+      ...chapters[indexChap].videos.slice(0, indexVid),
+        currentVideoClone,
+      ...chapters[indexChap].videos.slice(indexVid + 1),
+    ]
+    const currentChapterClone = {
+      ...chapters[indexChap],
+          isCurrent: false,
+          videos: currentVideosClone,
+    }
+    const nextVideoClone = {
+      ...chapters[indexNextChap].videos[indexNextVid],
+      isCurrent: true,
+    }
+    const nextVideosClone = [
+      ...chapters[indexNextChap].videos.slice(0, indexNextVid),
+        nextVideoClone,
+      ...chapters[indexNextChap].videos.slice(indexNextVid + 1),
+    ]
+    const nextChapterClone = {
+      ...chapters[indexNextChap],
+      isCurrent: true,
+      videos: nextVideosClone,
+    };
+
+    if (indexChap > indexNextChap) {
+      setChapters([
+        ...chapters.slice(0, indexNextChap),
+        nextChapterClone,
+        ...chapters.slice(indexNextChap + 1, indexChap),
+        currentChapterClone,
+        ...chapters.slice(indexChap + 1),
+      ]);
+      setCurrentChapter(nextChapterClone);
+    } else if (indexChap < indexNextChap) {
+      setChapters([
+        ...chapters.slice(0, indexChap),
+        currentChapterClone,
+        ...chapters.slice(indexChap + 1, indexNextChap),
+        nextChapterClone,
+        ...chapters.slice(indexNextChap + 1),
+      ]);
+      setCurrentChapter(nextChapterClone);
+    } else {
+      let currentVideos;
+      if (indexVid === indexNextVid) {
+        return;
+      } else if (indexVid > indexNextVid) {
+        currentVideos = [
+          ...chapters[indexChap].videos.slice(0, indexNextVid),
+          nextVideoClone,
+          ...chapters[indexChap].videos.slice(indexNextVid + 1, indexVid),
+          currentVideoClone,
+          ...chapters[indexChap].videos.slice(indexVid + 1),
+        ]
+        
+      } else {
+        currentVideos = [
+          ...chapters[indexChap].videos.slice(0, indexVid),
+          currentVideoClone,
+          ...chapters[indexChap].videos.slice(indexVid + 1, indexNextVid),
+          nextVideoClone,
+          ...chapters[indexChap].videos.slice(indexNextVid + 1),
+        ]
+      }
+      const nextChapter = {
+        ...chapters[indexChap],
+        videos: currentVideos,
+      }
+      setChapters([
+        ...chapters.slice(0, indexChap),
+        nextChapter,
+        ...chapters.slice(indexChap + 1),
+      ]);
+      setCurrentChapter(nextChapter);
+    }
+    
+    setCurrentVideo(nextVideoClone);
+    window.scrollTo({top: 0, behavior: 'smooth'});
   };
 
   const onClickShowChapter = (chapter) => {
@@ -50,7 +143,7 @@ const VideoCourse = () => {
 
   const onClickShowDescription = () => {
     setShowFullDes(!showFullDes);
-  }
+  };
 
   return (
     <Layout>
@@ -63,17 +156,25 @@ const VideoCourse = () => {
                 title={currentVideo.title}
                 className="video-course"
                 src={currentVideo.linkVideo}
-                frameborder="0"
+                frameBorder="0"
                 allowFullScreen
                 ng-show="showvideo"
               ></iframe>
               <h3 className="v-s-title">{currentVideo.title}</h3>
               <h3 className="v-s1-title">Description</h3>
-              <div className={`v-description ${showFullDes ? "" : "v-hide-text"}`}>
+              <div
+                className={`v-description ${showFullDes ? '' : 'v-hide-text'}`}
+              >
                 {htmlToReactParser.parse(currentVideo.description)}
               </div>
-              <p className='v-show-desc' onClick={onClickShowDescription}>{showFullDes ? "Show Less" : "Show More"}</p>
-              <img src="assets/images/course/comment-image.png" alt="comments" className='v-comments' />
+              <p className="v-show-desc" onClick={onClickShowDescription}>
+                {showFullDes ? 'Show Less' : 'Show More'}
+              </p>
+              <img
+                src="assets/images/course/comment-image.png"
+                alt="comments"
+                className="v-comments"
+              />
             </div>
           </section>
         )}
@@ -81,7 +182,7 @@ const VideoCourse = () => {
           <div className="v-right">
             <div className="list-chapter">
               {chapters.map((chapter) => (
-                <div className="chapter-item">
+                <div key={chapter.id} className="chapter-item">
                   <p
                     className="chapter-title"
                     onClick={() => onClickShowChapter(chapter)}
@@ -97,8 +198,9 @@ const VideoCourse = () => {
                     <ul className={chapter.isShow ? '' : 'v-hiden'}>
                       {chapter.videos.map((video) => (
                         <li
+                        key={video.id}
                           className="chapter-body"
-                          onClick={() => onClickSubVideo(video)}
+                          onClick={() => onClickSubVideo(video, chapter)}
                         >
                           {video.progress === 100 ? (
                             <i className="fa fa-check-circle"></i>
@@ -111,7 +213,13 @@ const VideoCourse = () => {
                             src={video.thumbail}
                             alt={video.title}
                           />
-                          <p className={`video-title ${video.isCurrent ? "current-video" : ""}`}>{video.title}</p>
+                          <p
+                            className={`video-title ${
+                              video.isCurrent ? 'current-video' : ''
+                            }`}
+                          >
+                            {video.title}
+                          </p>
                         </li>
                       ))}
                     </ul>

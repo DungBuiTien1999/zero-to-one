@@ -474,7 +474,7 @@ export const myCourses = [
             isCurrent: false,
             progress: 0,
             thumbail: 'assets/images/course/course6.png',
-            linkVideo: 'https://www.youtube.com/watch?v=e2-hyMc3l-E',
+            linkVideo: 'https://www.youtube.com/embed/e2-hyMc3l-E',
             description: `<p>React.js is THE most popular JavaScript library you can use and learn these days to build modern, reactive user interfaces for the web.</p>
                         <p>This course teaches you React in-depth, from the ground up, step by step by diving into all the core basics, exploring tons of examples and also introducing you to advanced concepts as well.</p>
                         <p>You'll get all the theory, tons of examples and demos, assignments and exercises and tons of important knowledge that is skipped by most other resources - after all, there is a reason why this course is that huge! :)</p>
