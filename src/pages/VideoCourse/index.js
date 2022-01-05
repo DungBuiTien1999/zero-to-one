@@ -203,9 +203,9 @@ const VideoCourse = () => {
                           onClick={() => onClickSubVideo(video, chapter)}
                         >
                           {video.progress === 100 ? (
-                            <i className="fa fa-check-circle"></i>
+                            <img className="circle-o" src="assets/images/course/Vector1.png"></img>
                           ) : (
-                            <i className="fa fa-circle-o"></i>
+                            <img className="circle-o" src="assets/images/course/Vector.png"></img>
                           )}
 
                           <img
