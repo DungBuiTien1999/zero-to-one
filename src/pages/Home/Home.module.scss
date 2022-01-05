@@ -4,8 +4,8 @@
   display: table-footer-group;
 
   .main {
-    padding: 50px;
-    width: 1272px;
+    padding: 45px;
+    width: 1270px;
     align-self: center;  
 
     .welcome {
@@ -24,5 +24,9 @@
     width: 100% !important;
     height: auto;
     object-fit: contain;
+  }
+
+  .marginFooter {
+    margin-bottom: 70px;
   }
 }
