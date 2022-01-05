@@ -205,7 +205,7 @@ const VideoCourse = () => {
                           {video.progress === 100 ? (
                             <i className="fa fa-check-circle"></i>
                           ) : (
-                            <i className="fa fa-circle"></i>
+                            <i className="fa fa-circle-o"></i>
                           )}
 
                           <img
