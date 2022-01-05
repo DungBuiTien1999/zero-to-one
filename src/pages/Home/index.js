@@ -44,7 +44,7 @@ const Home = () => {
           </div>
         </main>
         <img src='assets/images/home/Bảng xếp hạng và thông tin ứng tuyển.png' alt='Bảng xếp hạng và thông tin tuyển dụng.' /> 
-        <img src='assets/images/home/TinTuc.png' alt='Sự kiện trong tháng.' /> 
+        <img className={classes.marginFooter} src='assets/images/home/TinTuc.png' alt='Sự kiện trong tháng.' /> 
       </div>
     </Layout>
   );

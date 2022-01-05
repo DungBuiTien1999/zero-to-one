@@ -20,18 +20,19 @@
 }
 
 .btnSeeAll {
-    width: 150px;
+    width: 149px;
     height: 42px;
     left: 1086px;
     top: 1295.31px;
     margin-top: 30px;
     background: #FFFFFF;
-
+    border: 2.5px solid #FF9A62;
     box-sizing: border-box;
     border-radius: 25px;
     display: flex;
     justify-content: space-around;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: 700;
     align-items: center;
     color: #FF9A62;
     margin-left: auto;

@@ -28,7 +28,12 @@ const HotCategories = ({title, categories}) => {
                         </div>
                     </div>
                 ))}
+                
             </section>
+            <div className={classes.btnSeeAll}>
+                    Xem tất cả
+                    <i className="material-icons">arrow_forward</i>
+                </div>
         </Fragment>
     )
 }
