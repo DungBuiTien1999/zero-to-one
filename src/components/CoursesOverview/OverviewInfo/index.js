@@ -30,7 +30,7 @@ export default function OverviewInfo(props) {
             <span>&ensp;Cập nhật lần cuối vào lúc {props.last_update}</span>
           </div>
 
-          <div className={classes.watchlist}>
+          <div className={`row ${classes.watchlist}`}>
             <a className={`waves-light btn ${classes["custom-love-btn"]}`}>
               Yêu thích
               <i className="material-icons center">favorite_border</i>
