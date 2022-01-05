@@ -212,6 +212,8 @@
   text-transform: none;
   margin-bottom: 20px;
   &:hover{
+    background-color: transparent;
+    border: 2px solid #FCD302;
     & i{
         color: #FF0000;
     }
