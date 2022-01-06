@@ -173,6 +173,7 @@
   &:hover{
     background-color: #FFFFFF;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    // color: #FCD302 !important;
     & img{
       transform: scale(1.25);
     }
@@ -213,16 +214,16 @@
   margin-bottom: 20px;
   &:hover{
     background-color: transparent;
-    border: 2px solid #FCD302;
+    border: 2px solid white;
     & i{
-        color: #FF0000;
+        color: white;
     }
   }
   & i{
     vertical-align: middle;
     margin-left: 5px;
     &:hover{
-      color: #FF0000;
+      color: white;
     }
   }
 }
