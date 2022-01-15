@@ -1,11 +1,40 @@
 import React from "react";
 import classes from "./style.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import currency from "currency.js";
 import burstSaleImage from "assets/images/course-detail/foundation_burst-sale.png";
-import cursorHandClickImage from "assets/images/course-detail/clarity_cursor-hand-click-line.png";
+import cursorHandClickImage from "assets/images/course-detail/clarity_cursor-hand-click-line.png"
+import Swal from 'sweetalert2';
 
 export default function OverviewInfo(props) {
+  const router = useHistory();
+  const handleClickBuyNow = () => {
+    const isAuth = localStorage.getItem("isAuth");
+    if(isAuth === "false"){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Bạn cần phải đăng nhập để thực hiện điều này',
+        showCancelButton: true,
+        confirmButtonText: 'Go to Login',
+      }).then((result)=> {
+        if(result.isConfirmed){
+          router.push("/login");
+        }
+      })
+    }else{
+      Swal.fire('Coming soon');
+    }
+  }
+
+  const handleAddToCart = () => {
+    Swal.fire('Coming soon');
+  }
+
+  const handleFavoriteBtn = () => {
+    Swal.fire('Coming soon');
+  }
+
   return (
     <div className={classes.playerwrapper}>
       {/* Header video */}
@@ -31,7 +60,7 @@ export default function OverviewInfo(props) {
           </div>
 
           <div className={`row ${classes.watchlist}`}>
-            <a className={`waves-light btn ${classes["custom-love-btn"]}`}>
+            <a className={`waves-light btn ${classes["custom-love-btn"]}`} onClick={handleFavoriteBtn}>
               Yêu thích
               <i className="material-icons center">favorite_border</i>
             </a>
@@ -108,20 +137,22 @@ export default function OverviewInfo(props) {
 
                 {
                   <div className={classes["button-area-container"]}>
-                    <Link
-                      to="/video-course"
+                    <div
+                      // to="/video-course"
                       className={`waves-light btn ${classes.addToShopBtn}`}
+                      onClick={handleAddToCart}
                     >
                       Thêm vào giỏ
-                    </Link>
+                    </div>
                     <div className={classes["buy-now-container"]}>
-                      <Link
-                        to="/video-course"
+                      <div
+                        // to="/video-course"
+                        onClick={handleClickBuyNow}
                         className={`waves-light btn ${classes["buy-now-btn"]}`}
                       >
                         Mua Ngay
                         <img src={cursorHandClickImage} alt="" />
-                      </Link>
+                      </div>
                     </div>
                   </div>
                 }
