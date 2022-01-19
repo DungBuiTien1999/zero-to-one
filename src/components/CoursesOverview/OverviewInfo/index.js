@@ -13,26 +13,35 @@ export default function OverviewInfo(props) {
     if(isAuth === "false"){
       Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'Bạn cần phải đăng nhập để thực hiện điều này',
+        html: "<b>Bạn cần phải đăng nhập để tiếp tục</b>",
         showCancelButton: true,
         confirmButtonText: 'Go to Login',
+        confirmButtonColor: "#0D1C45"
       }).then((result)=> {
         if(result.isConfirmed){
           router.push("/login");
         }
       })
     }else{
-      Swal.fire('Coming soon');
+      Swal.fire({
+        html: "<b>Coming soon</b>",
+        confirmButtonColor: "#0D1C45"
+      });
     }
   }
 
   const handleAddToCart = () => {
-    Swal.fire('Coming soon');
+    Swal.fire({
+      html: "<b>Coming soon</b>",
+      confirmButtonColor: "#0D1C45"
+    });
   }
 
   const handleFavoriteBtn = () => {
-    Swal.fire('Coming soon');
+    Swal.fire({
+      html: "<b>Coming soon</b>",
+      confirmButtonColor: "#0D1C45"
+    });
   }
 
   return (
