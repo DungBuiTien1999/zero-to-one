@@ -8,8 +8,8 @@ import Swal from 'sweetalert2';
 
 export default function OverviewInfo(props) {
   const router = useHistory();
-  const handleClickBuyNow = () => {
-    const isAuth = localStorage.getItem("isAuth");
+  const isAuth = localStorage.getItem("isAuth");
+  const handlePopup = () => {
     if(isAuth === "false"){
       Swal.fire({
         icon: 'error',
@@ -29,19 +29,16 @@ export default function OverviewInfo(props) {
       });
     }
   }
+  const handleClickBuyNow = () => {
+    handlePopup();
+  }
 
   const handleAddToCart = () => {
-    Swal.fire({
-      html: "<b>Coming soon</b>",
-      confirmButtonColor: "#0D1C45"
-    });
+    handlePopup();
   }
 
   const handleFavoriteBtn = () => {
-    Swal.fire({
-      html: "<b>Coming soon</b>",
-      confirmButtonColor: "#0D1C45"
-    });
+    handlePopup();
   }
 
   return (
