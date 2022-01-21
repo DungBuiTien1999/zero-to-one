@@ -15,7 +15,8 @@ export default function OverviewInfo(props) {
         icon: 'error',
         html: "<b>Bạn cần phải đăng nhập để tiếp tục</b>",
         showCancelButton: true,
-        confirmButtonText: 'Go to Login',
+        confirmButtonText: 'Đăng nhập',
+        cancelButtonText: 'Hủy',
         confirmButtonColor: "#0D1C45"
       }).then((result)=> {
         if(result.isConfirmed){
@@ -24,7 +25,7 @@ export default function OverviewInfo(props) {
       })
     }else{
       Swal.fire({
-        html: "<b>Coming soon</b>",
+        html: "<b>Tính năng đang phát triển</b>",
         confirmButtonColor: "#0D1C45"
       });
     }
