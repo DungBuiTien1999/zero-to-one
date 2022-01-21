@@ -26,7 +26,8 @@ export default function OverviewInfo(props) {
     }else{
       Swal.fire({
         html: "<b>Tính năng đang phát triển</b>",
-        confirmButtonColor: "#0D1C45"
+        confirmButtonColor: "#0D1C45",
+        confirmButtonText: 'Đóng',
       });
     }
   }
